@@ -150,7 +150,8 @@
       // scene.add(makeGrid());
 
       //SKYBOX
-      scene.add(makeSkyBoxNight());
+      var skyBox = makeSkyBoxDay();
+      scene.add(skyBox);
 
       //PLANE & APARTMENT
       var lawn = makeLawn(100,100);
@@ -167,6 +168,7 @@
 
       var controls = new function () {
         this.roof = false;
+        this.night = false;
 
         this.pointLock = function() {
           // controls = new THREE.PointerLockControls( camera );
@@ -178,6 +180,7 @@
       };
 
       gui.add(controls, 'pointLock');
+
       var roofControl = gui.add(controls, 'roof');
 
       roofControl.onChange(function (value) {
@@ -187,6 +190,23 @@
           }
           else {
             window.location.roof = false;
+          }
+        });
+
+      var night = gui.add(controls, 'night');
+
+      night.onChange(function (value) {
+          if(!value) {
+            window.location.night = true;
+            scene.remove(skyBox);
+            skyBox = makeSkyBoxNight();
+            scene.add(skyBox);
+          }
+          else {
+            window.location.night = false;
+            scene.remove(skyBox);
+            skyBox = makeSkyBoxDay();
+            scene.add(skyBox);
           }
         });
         
