@@ -75,14 +75,10 @@ function makeLights() {
       target4 = new THREE.Mesh(targetGeometry, targetMaterial);
       target4.position.set(-37,0,26);
 
-      var helper = new THREE.AxisHelper();
-      target1.add(helper);
-            var helper = new THREE.AxisHelper();
-      target2.add(helper);
-            var helper = new THREE.AxisHelper();
-      target3.add(helper);
-            var helper = new THREE.AxisHelper();
-      target4.add(helper);
+      lights.add(target1);
+      lights.add(target2);
+      lights.add(target3);
+      lights.add(target4);
 
       spotLight1 = new THREE.SpotLight(0xff0000,1,20,Math.PI/24);
       spotLight1.position.set(12.9, 6.6, 2.8);
