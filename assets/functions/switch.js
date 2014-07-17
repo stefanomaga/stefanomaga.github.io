@@ -50,10 +50,10 @@ function makeSwitch(light) {
 
 	switch_Box.interact = function() {
 		if (switch_Box.on) {
-			switch_Box.light.visible = false;
+			switch_Box.light.intensity = 0;
 			switch_Box.on = false;
 		} else {
-			switch_Box.light.visible = true;
+			switch_Box.light.intensity = 1;
 			switch_Box.on = true;
 		}	
 	}
@@ -76,16 +76,16 @@ function makeSpecialSwitch(light1,light2,light3,light4) {
 
 	switch_Box.interact = function() {
 		if (switch_Box.on) {
-			switch_Box.light1.visible = false;
-			switch_Box.light2.visible = false;
-			switch_Box.light3.visible = false;
-			switch_Box.light4.visible = false;
+			switch_Box.light1.intensity = 0;
+			switch_Box.light2.intensity = 0;
+			switch_Box.light3.intensity = 0;
+			switch_Box.light4.intensity = 0;
 			switch_Box.on = false;
 		} else {
-			switch_Box.light1.visible = true;
-			switch_Box.light2.visible = true;
-			switch_Box.light3.visible = true;
-			switch_Box.light4.visible = true;
+			switch_Box.light1.intensity = 50;
+			switch_Box.light2.intensity = 50;
+			switch_Box.light3.intensity = 50;
+			switch_Box.light4.intensity = 50;
 			switch_Box.on = true;
 		}	
 	}

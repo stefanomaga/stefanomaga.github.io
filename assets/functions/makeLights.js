@@ -78,7 +78,6 @@ function makeLights() {
       spotLight1 = new THREE.SpotLight(0xff0000,1,20,Math.PI/24);
       spotLight1.position.set(12.9, 6.6, 2.8);
       spotLight1.intensity = 50;
-      // spotLight1.target = new THREE.Vector3(0,0,10);
       lights.add(spotLight1);
 
       spotLight2 = new THREE.SpotLight(0x00ff00,1,20,Math.PI/24);
