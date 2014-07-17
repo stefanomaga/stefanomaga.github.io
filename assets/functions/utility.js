@@ -93,8 +93,8 @@ function makeLawn(x,y) {
       lawn = createMesh(lawnGeometry, "grass.jpg", "grassBump.jpg");
       lawn.material.map.repeat.set(20,20);
       lawn.material.bumpMap.repeat.set(20,20);
-      lawn.rotation.x = Math.PI/2;
-      lawn.position.set(x/2,y/2,0);
+      lawn.rotation.x = Math.PI;
+      lawn.position.set(-x/2,-y/2,0);
       return lawn;
 
 }
