@@ -153,7 +153,10 @@
       scene.add(makeSkyBox());
 
       //PLANE & APARTMENT
-      scene.add(makeLawn(100,100).add(makeApartment()))
+      var lawn = makeLawn(100,100);
+      var apartment = makeApartment();
+      lawn.add(apartment);
+      scene.add(lawn);  
 
       //MUSIC
       stereo_Box = animateStereo();
