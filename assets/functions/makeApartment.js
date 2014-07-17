@@ -32,7 +32,7 @@ function makeApartment() {
       apartment.rotation.z = -Math.PI;
 
       //OBJECTS
-      // apartment.add(makeObjects());
+      apartment.add(makeObjects());
 
       //MOVIES
       apartment.add(makeTvs());
