@@ -134,7 +134,7 @@
       webGLRenderer.setSize(window.innerWidth, window.innerHeight);
 
       // position and point the camera to the center of the scene
-      camera.position.set(0,8,50);
+      camera.position.set(0,0,1.5);
       camera.lookAt(new THREE.Vector3(0,0,0));
       
       var projector = new THREE.Projector();
@@ -215,7 +215,7 @@
             scene.remove(skyBox);
             skyBox = makeSkyBoxNight();
             scene.add(skyBox);
-            console.log("2");
+            console.log("3");
           }
           else {
             directionalLight1.intensity = 0.75;
@@ -236,7 +236,7 @@
             scene.remove(skyBox);
             skyBox = makeSkyBoxDay();
             scene.add(skyBox);
-            console.log("2");
+            console.log("3");
           }
         });
         
