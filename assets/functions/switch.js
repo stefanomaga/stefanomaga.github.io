@@ -75,26 +75,21 @@ function makeSpecialSwitch(light1,light2,light3,light4) {
 	switch_Box.light3.target = target3;
 	switch_Box.light4 = light4;
 	switch_Box.light4.target = target4;
-
-		var helper = new THREE.AxisHelper();
-	light1.add(helper);
-		var helper = new THREE.AxisHelper();
-	light2.add(helper);
-		var helper = new THREE.AxisHelper();
-	light3.add(helper);
-		var helper = new THREE.AxisHelper();
-	light4.add(helper);
+	switch_Box.light1.visible = true;
+	switch_Box.light2.visible = true;
+	switch_Box.light3.visible = true;
+	switch_Box.light4.visible = true;
 
 	switch_Box.interact = function() {
 		if (switch_Box.on) {
-			console.log("switch on");
+			console.log("switch special on");
 			switch_Box.light1.intensity = 0;
 			switch_Box.light2.intensity = 0;
 			switch_Box.light3.intensity = 0;
 			switch_Box.light4.intensity = 0;
 			switch_Box.on = false;
 		} else {
-			console.log("switch off");
+			console.log("switch special off");
 			switch_Box.light1.intensity = 50;
 			switch_Box.light2.intensity = 50;
 			switch_Box.light3.intensity = 50;
