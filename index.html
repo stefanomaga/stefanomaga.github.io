@@ -197,22 +197,40 @@
 
       night.onChange(function (value) {
           if(value) {
-            lights.directionalLight1.visible = true;
-            directionalLight2.visible = true;
-            directionalLight3.visible = true;
-            directionalLight4.visible = true;
-            directionalLight5.visible = true;
+            directionalLight1.visible = false;
+            directionalLight2.visible = false;
+            directionalLight3.visible = false;
+            directionalLight4.visible = false;
+            directionalLight5.visible = false;
+            pointLight1.visible = true;
+            pointLight2.visible = true;
+            pointLight3.visible = true;
+            pointLight4.visible = true;
+            pointLight5.visible = true;
+            spotLight1.visible = true;
+            spotLight2.visible = true;
+            spotLight3.visible = true;
+            spotLight4.visible = true;
             window.location.night = true;
             scene.remove(skyBox);
             skyBox = makeSkyBoxNight();
             scene.add(skyBox);
           }
           else {
-            directionalLight1.visible = false;
-            directionalLight2.visible = false;
-            directionalLight3.visible = false;
-            directionalLight4.visible = false;
-            directionalLight5.visible = false;
+            directionalLight1.visible = true;
+            directionalLight2.visible = true;
+            directionalLight3.visible = true;
+            directionalLight4.visible = true;
+            directionalLight5.visible = true;
+            pointLight1.visible = false;
+            pointLight2.visible = false;
+            pointLight3.visible = false;
+            pointLight4.visible = false;
+            pointLight5.visible = false;
+            spotLight1.visible = false;
+            spotLight2.visible = false;
+            spotLight3.visible = false;
+            spotLight4.visible = false;
             window.location.night = false;
             scene.remove(skyBox);
             skyBox = makeSkyBoxDay();
