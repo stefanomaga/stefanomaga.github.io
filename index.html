@@ -197,15 +197,15 @@
 
       night.onChange(function (value) {
           if(!value) {
-            window.location.night = true;
-            scene.remove(skyBox);
-            skyBox = makeSkyBoxNight();
-            scene.add(skyBox);
-          }
-          else {
             window.location.night = false;
             scene.remove(skyBox);
             skyBox = makeSkyBoxDay();
+            scene.add(skyBox);
+          }
+          else {
+            window.location.night = true;
+            scene.remove(skyBox);
+            skyBox = makeSkyBoxNight();
             scene.add(skyBox);
           }
         });
