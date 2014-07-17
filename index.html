@@ -197,6 +197,14 @@
 
       night.onChange(function (value) {
           if(value) {
+            switch1.on = true;
+            switch2.on = true;
+            switch3.on = true;
+            switch4.on = true;
+            switch5.on = true;
+            switch6.on = true;
+            switch7.on = true;
+
             directionalLight1.intensity = 0.25;
             directionalLight2.intensity = 0.25;
             directionalLight3.intensity = 0.25;
@@ -216,9 +224,17 @@
             scene.remove(skyBox);
             skyBox = makeSkyBoxNight();
             scene.add(skyBox);
-            console.log("5");
+            console.log("6");
           }
           else {
+            switch1.on = false;
+            switch2.on = false;
+            switch3.on = false;
+            switch4.on = false;
+            switch5.on = false;
+            switch6.on = false;
+            switch7.on = false;
+
             directionalLight1.intensity = 0.75;
             directionalLight2.intensity = 0.75;
             directionalLight3.intensity = 0.75;
@@ -238,7 +254,7 @@
             scene.remove(skyBox);
             skyBox = makeSkyBoxDay();
             scene.add(skyBox);
-            console.log("5");
+            console.log("6");
           }
         });
         
