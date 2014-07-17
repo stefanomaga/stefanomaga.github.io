@@ -94,6 +94,7 @@ function makeLawn(x,y) {
       lawn.material.map.repeat.set(20,20);
       lawn.material.bumpMap.repeat.set(20,20);
       lawn.rotation.z = Math.PI/2;
+      lawn.rotation.x = Math.PI/2;
       lawn.position.set(-x/2,-y/2,0);
       return lawn;
 
