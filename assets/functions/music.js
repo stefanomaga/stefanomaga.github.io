@@ -27,7 +27,7 @@ function animateStereo() {
 	}
 
 	stereo_Box.rotation.y = Math.PI/2;
-	stereo_Box.position.set(-44+42,10,27.8-47.5);
+	stereo_Box.position.set(-44+42,10,27.8-47);
 
 	return stereo_Box;
 
