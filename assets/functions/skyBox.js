@@ -21,7 +21,7 @@ function makeSkyBox() {
 function makeSkyBoxDay() {
 
 	var imagePrefix = "assets/textures/lostatseadyay/lostatseaday";
-	var directions  = ["_back", "_left", "_top", "_right", "_bot","_front"];
+	var directions  = ["_bot", "_front", "_top", "_right", "_back","_left"];
 	var imageSuffix = ".jpg";
 	var skyGeometry = new THREE.BoxGeometry( 100, 100, 100 );
 
