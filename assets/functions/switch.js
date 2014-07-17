@@ -80,6 +80,13 @@ function makeSpecialSwitch(light1,light2,light3,light4) {
 	switch_Box.light3.visible = true;
 	switch_Box.light4.visible = true;
 
+	var helper = new THREE.AxisHelper();
+	target1.add(helper);
+	target2.add(helper);
+	target3.add(helper);
+	target4.add(helper);
+
+
 	switch_Box.interact = function() {
 		if (switch_Box.on) {
 			console.log("switch special on");
