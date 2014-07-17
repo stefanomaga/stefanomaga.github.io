@@ -117,7 +117,7 @@
     // once everything is loaded, we run our Three.js stuff.
     $(function () {
       var stats = initStats();
-            console.log("27");
+            console.log("28");
 
       // create a scene
       scene = new THREE.Scene();
@@ -194,6 +194,7 @@
 
       night.onChange(function (value) {
           if(value) {
+            console.log("notte!")
             switch1.on = true;
             switch2.on = true;
             switch3.on = true;
