@@ -8,7 +8,7 @@ function animateStereo() {
 	stereo.onPlay = false;
 
 	var stereoGeometry = new THREE.BoxGeometry(2,1,1);
-	var stereoMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 0});
+	var stereoMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 1});
 	stereo_Box = new THREE.Mesh(stereoGeometry, stereoMaterial);
 
 	var helper = new THREE.AxisHelper(100);
@@ -26,7 +26,7 @@ function animateStereo() {
 		}	
 	}
 
-	stereo_Box.position.set(-43.6,11.5,27.8);
+	stereo_Box.position.set(-43.6+25,11.5,27.8-25);
 
 	return stereo_Box;
 
