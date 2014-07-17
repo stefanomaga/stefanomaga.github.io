@@ -30,32 +30,32 @@ function makeLights() {
       //add pointLight
       pointLight1 = new THREE.PointLight(0xffff00,1,12);
       pointLight1.position.set(12.9, 2.8, 3);
-      pointLight1.intensity = 1;
+      pointLight1.intensity = 0;
       lights.add(pointLight1);
 
       pointLight2 = new THREE.PointLight(0xffff00,1,10);
       pointLight2.position.set(7.9, 2.8, 3);
-      pointLight2.intensity = 1;
+      pointLight2.intensity = 0;
       lights.add(pointLight2);
 
       pointLight3 = new THREE.PointLight(0xffff00,1,10);
       pointLight3.position.set(4.4, 5, 3);
-      pointLight3.intensity = 1;
+      pointLight3.intensity = 0;
       lights.add(pointLight3);
 
       pointLight4 = new THREE.PointLight(0xffff00,1,10);
       pointLight4.position.set(4.4, 8, 3);
-      pointLight4.intensity = 1;
+      pointLight4.intensity = 0;
       lights.add(pointLight4);
 
       pointLight5 = new THREE.PointLight(0xffff00,1,10);
       pointLight5.position.set(4.4, 12, 3);
-      pointLight5.intensity = 1;
+      pointLight5.intensity = 0;
       lights.add(pointLight5);
 
       pointLight6 = new THREE.PointLight(0xffff00,1,10);
       pointLight6.position.set(9.9, 8, 3);
-      pointLight6.intensity = 1;
+      pointLight6.intensity = 0;
       lights.add(pointLight6);
 
       //add spotLight
@@ -82,17 +82,17 @@ function makeLights() {
 
       spotLight2 = new THREE.SpotLight(0x00ff00,1,20,Math.PI/24);
       spotLight2.position.set(12.9, 6.9, 2.8);
-      spotLight2.intensity = 50;
+      spotLight2.intensity = 0;
       lights.add(spotLight2);
 
       spotLight3 = new THREE.SpotLight(0x0000ff,1,20,Math.PI/24);
       spotLight3.position.set(12.9, 7.2, 2.8);
-      spotLight3.intensity = 50;
+      spotLight3.intensity = 0;
       lights.add(spotLight3);
 
       spotLight4 = new THREE.SpotLight(0xff00ff,1,20,Math.PI/24);
       spotLight4.position.set(12.9, 7.5, 2.8);
-      spotLight4.intensity = 50;
+      spotLight4.intensity = 0;
       lights.add(spotLight4);
 
       return lights;

@@ -48,6 +48,9 @@ function makeSwitch(light) {
 	switch_Box.light = light;
 	switch_Box.light.visible = true;
 
+	var helper = new THREE.AxisHelper();
+	light.add(helper);
+
 	switch_Box.interact = function() {
 		if (switch_Box.on) {
 			console.log("switch on");
