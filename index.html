@@ -197,12 +197,22 @@
 
       night.onChange(function (value) {
           if(value) {
+            directionalLight1.visible = true;
+            directionalLight2.visible = true;
+            directionalLight3.visible = true;
+            directionalLight4.visible = true;
+            directionalLight5.visible = true;
             window.location.night = true;
             scene.remove(skyBox);
             skyBox = makeSkyBoxNight();
             scene.add(skyBox);
           }
           else {
+            directionalLight1.visible = false;
+            directionalLight2.visible = false;
+            directionalLight3.visible = false;
+            directionalLight4.visible = false;
+            directionalLight5.visible = false;
             window.location.night = false;
             scene.remove(skyBox);
             skyBox = makeSkyBoxDay();

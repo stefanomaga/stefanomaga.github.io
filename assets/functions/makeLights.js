@@ -2,27 +2,27 @@ function makeLights() {
 
       var lights = new THREE.Object3D();      
       // add directional light
-      var directionalLight1 = new THREE.DirectionalLight(0xffffff);
+      directionalLight1 = new THREE.DirectionalLight(0xffffff);
       directionalLight1.position.set(9.25, 7.5, 50);
       directionalLight1.intensity = 0.75;
       lights.add(directionalLight1);
 
-      var directionalLight2 = new THREE.DirectionalLight(0xffffff);
+      directionalLight2 = new THREE.DirectionalLight(0xffffff);
       directionalLight2.position.set(-50, 7.5, 1.5);
       directionalLight2.intensity = 1;
       lights.add(directionalLight2);
 
-      var directionalLight3 = new THREE.DirectionalLight(0xffffff);
+      directionalLight3 = new THREE.DirectionalLight(0xffffff);
       directionalLight3.position.set(9.25, 57.5, 1.5);
       directionalLight3.intensity = 0.75;
       lights.add(directionalLight3);
 
-      var directionalLight4 = new THREE.DirectionalLight(0xffffff);
+      directionalLight4 = new THREE.DirectionalLight(0xffffff);
       directionalLight4.position.set(59.25, 7.5, 1.5);
       directionalLight4.intensity = 0.75;
       lights.add(directionalLight4);
 
-      var directionalLight5 = new THREE.DirectionalLight(0xffffff);
+      directionalLight5 = new THREE.DirectionalLight(0xffffff);
       directionalLight5.position.set(9.25, -50, 1.5);
       directionalLight5.intensity = 0.75;
       lights.add(directionalLight5);
