@@ -9,7 +9,10 @@ function animateStereo() {
 
 	var stereoGeometry = new THREE.BoxGeometry(2,1,1);
 	var stereoMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 0});
-	var stereo_Box = new THREE.Mesh(stereoGeometry, stereoMaterial);
+	stereo_Box = new THREE.Mesh(stereoGeometry, stereoMaterial);
+
+	var helper = new THREE.AxisHelper(100);
+	stereo_Box.add(helper);
 
 	stereo_Box.audio = stereo;
 

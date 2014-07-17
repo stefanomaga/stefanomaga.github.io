@@ -34,6 +34,9 @@ function makeApartment() {
       //MOVIES
       apartment.add(makeTvs());
 
+      //MUSIC
+      scene.add(animateStereo());
+
       apartment.rotation.x = Math.PI;
       apartment.position.set(25,-25,0);
       apartment.scale.set(3,3,3);

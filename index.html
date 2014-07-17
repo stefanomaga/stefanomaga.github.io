@@ -117,7 +117,7 @@
     // once everything is loaded, we run our Three.js stuff.
     $(function () {
       var stats = initStats();
-            console.log("22");
+            console.log("23");
 
       // create a scene
       scene = new THREE.Scene();
@@ -135,7 +135,7 @@
       webGLRenderer.setSize(window.innerWidth, window.innerHeight);
 
       // position and point the camera to the center of the scene
-      camera.position.set(0,0,25);
+      camera.position.set(0,0,50);
       camera.lookAt(new THREE.Vector3(0,0,0));
       
       var projector = new THREE.Projector();
@@ -159,10 +159,6 @@
       var skyBox = makeSkyBoxDay();
       skyBox.add(lawn);
       scene.add(skyBox);
-
-      //MUSIC
-      stereo_Box = animateStereo();
-      scene.add(stereo_Box);
       
       // setup the control gui
       var gui = new dat.GUI();
