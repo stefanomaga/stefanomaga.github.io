@@ -26,7 +26,7 @@ function animateStereo() {
 		}	
 	}
 
-	stereo_Box.position.set(-43.6+50,11.5,27.8-50);
+	stereo_Box.position.set(-43.6+40,11.5,27.8-40);
 
 	return stereo_Box;
 
