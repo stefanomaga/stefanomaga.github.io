@@ -50,9 +50,11 @@ function makeSwitch(light) {
 
 	switch_Box.interact = function() {
 		if (switch_Box.on) {
+			console.log("switch on");
 			switch_Box.light.intensity = 0;
 			switch_Box.on = false;
 		} else {
+			console.log("switch off");
 			switch_Box.light.intensity = 1;
 			switch_Box.on = true;
 		}	
@@ -76,12 +78,14 @@ function makeSpecialSwitch(light1,light2,light3,light4) {
 
 	switch_Box.interact = function() {
 		if (switch_Box.on) {
+			console.log("switch on");
 			switch_Box.light1.intensity = 0;
 			switch_Box.light2.intensity = 0;
 			switch_Box.light3.intensity = 0;
 			switch_Box.light4.intensity = 0;
 			switch_Box.on = false;
 		} else {
+			console.log("switch off");
 			switch_Box.light1.intensity = 50;
 			switch_Box.light2.intensity = 50;
 			switch_Box.light3.intensity = 50;
