@@ -82,8 +82,11 @@ function makeSpecialSwitch(light1,light2,light3,light4) {
 
 	var helper = new THREE.AxisHelper();
 	target1.add(helper);
+	var helper = new THREE.AxisHelper();
 	target2.add(helper);
+	var helper = new THREE.AxisHelper();
 	target3.add(helper);
+	var helper = new THREE.AxisHelper();
 	target4.add(helper);
 
 

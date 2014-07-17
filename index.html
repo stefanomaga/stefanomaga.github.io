@@ -117,6 +117,7 @@
     // once everything is loaded, we run our Three.js stuff.
     $(function () {
       var stats = initStats();
+            console.log("10");
 
       // create a scene
       scene = new THREE.Scene();
@@ -224,7 +225,6 @@
             scene.remove(skyBox);
             skyBox = makeSkyBoxNight();
             scene.add(skyBox);
-            console.log("9");
           }
           else {
             switch1.on = false;
@@ -254,7 +254,6 @@
             scene.remove(skyBox);
             skyBox = makeSkyBoxDay();
             scene.add(skyBox);
-            console.log("9");
           }
         });
         
