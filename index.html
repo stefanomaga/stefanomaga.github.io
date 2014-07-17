@@ -149,14 +149,11 @@
       // //GRID
       // scene.add(makeGrid());
 
-      //MAKE APARTMENT
-      scene.add(makeApartment());
-
       //SKYBOX
       scene.add(makeSkyBox());
 
-      //PLANE
-      scene.add(makeLawn(100,100))
+      //PLANE & APARTMENT
+      scene.add(makeLawn(100,100).add(makeApartment()))
 
       //MUSIC
       stereo_Box = animateStereo();
