@@ -34,7 +34,7 @@ function makeSkyBoxDay() {
 		}));
 	var skyMaterial = new THREE.MeshFaceMaterial( materialArray );
 	var skyBox = new THREE.Mesh( skyGeometry, skyMaterial );
-	skyBox.position.set(0,0,0);
+	skyBox.position.set(0,0,50);
 	return skyBox;
 }
 

@@ -117,7 +117,7 @@
     // once everything is loaded, we run our Three.js stuff.
     $(function () {
       var stats = initStats();
-            console.log("17");
+            console.log("18");
 
       // create a scene
       scene = new THREE.Scene();
@@ -150,15 +150,15 @@
       // //GRID
       // scene.add(makeGrid());
 
-      //SKYBOX
-      var skyBox = makeSkyBoxDay();
-      scene.add(skyBox);
-
       //PLANE & APARTMENT
       var lawn = makeLawn(100,100);
       var apartment = makeApartment();
       lawn.add(apartment);
-      scene.add(lawn);  
+
+      //SKYBOX
+      var skyBox = makeSkyBoxDay();
+      skyBox.add(lawn);
+      scene.add(skyBox);
 
       //MUSIC
       stereo_Box = animateStereo();
