@@ -1,6 +1,6 @@
 function makeLights() {
 
-      var lights = new THREE.Object3D();      
+      lights = new THREE.Object3D();      
       // add directional light
       directionalLight1 = new THREE.DirectionalLight(0xffffff);
       directionalLight1.position.set(9.25, 7.5, 50);
