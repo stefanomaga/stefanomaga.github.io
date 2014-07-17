@@ -211,7 +211,7 @@
             spotLight2.intensity = 50;
             spotLight3.intensity = 50;
             spotLight4.intensity = 50;
-            window.location.night = 50;
+            window.location.night = true;
             scene.remove(skyBox);
             skyBox = makeSkyBoxNight();
             scene.add(skyBox);
@@ -231,7 +231,7 @@
             spotLight2.intensity = 0;
             spotLight3.intensity = 0;
             spotLight4.intensity = 0;
-            window.location.night = 0;
+            window.location.night = false;
             scene.remove(skyBox);
             skyBox = makeSkyBoxDay();
             scene.add(skyBox);
