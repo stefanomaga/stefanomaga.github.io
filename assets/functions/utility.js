@@ -86,3 +86,15 @@ function makeGrid() {
   grid.position.set(-5.5,10,0);
   return grid;
 }
+
+function makeLawn(x,y) {
+
+      var lawnGeometry = new THREE.PlaneGeometry(x,y);
+      lawn = createMesh(lawnGeometry, "grass.jpg", "grassBump.jpg");
+      lawn.material.map.repeat.set(20,20);
+      lawn.material.bumpMap.repeat.set(20,20);
+      lawn.position.set(x/6,x/6,-0.01);
+
+      return lawn;
+
+}
