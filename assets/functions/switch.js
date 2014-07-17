@@ -46,6 +46,7 @@ function makeSwitch(light) {
 	var switch_Box = new THREE.Mesh(switchGeometry, switchMaterial);
 	switch_Box.on = false;
 	switch_Box.light = light;
+	switch_Box.light.visible = false;
 
 	switch_Box.interact = function() {
 		if (switch_Box.on) {
