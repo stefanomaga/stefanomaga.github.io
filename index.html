@@ -117,7 +117,7 @@
     // once everything is loaded, we run our Three.js stuff.
     $(function () {
       var stats = initStats();
-            console.log("15");
+            console.log("16");
 
       // create a scene
       scene = new THREE.Scene();
@@ -135,7 +135,7 @@
       webGLRenderer.setSize(window.innerWidth, window.innerHeight);
 
       // position and point the camera to the center of the scene
-      camera.position.set(0,-50,1.5);
+      camera.position.set(0,0,0);
       camera.lookAt(new THREE.Vector3(0,0,0));
       
       var projector = new THREE.Projector();

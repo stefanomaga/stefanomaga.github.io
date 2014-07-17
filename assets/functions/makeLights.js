@@ -64,16 +64,16 @@ function makeLights() {
       var targetMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 0});
 
       target1 = new THREE.Mesh(targetGeometry, targetMaterial);
-      target1.position.set(-35 +25,-50,15+25);
+      target1.position.set(-35 +25,-50,15-25);
 
       target2 = new THREE.Mesh(targetGeometry, targetMaterial);
-      target2.position.set(-33+25,-50, 20+25);
+      target2.position.set(-33+25,-50, 20-25);
 
       target3 = new THREE.Mesh(targetGeometry, targetMaterial);
-      target3.position.set(-24+25,-50, 24+25);
+      target3.position.set(-24+25,-50, 24-25);
 
       target4 = new THREE.Mesh(targetGeometry, targetMaterial);
-      target4.position.set(-37+25,-50, 26+25);
+      target4.position.set(-37+25,-50, 26-25);
 
       spotLight1 = new THREE.SpotLight(0xff0000,1,20,Math.PI/24);
       spotLight1.position.set(12.9, 6.6, 2.8);
