@@ -198,10 +198,10 @@
       night.onChange(function (value) {
           if(value) {
             directionalLight1.intensity = 0.25;
-            directionalLight2.visible = 0.25;
-            directionalLight3.visible = 0.25;
-            directionalLight4.visible = 0.25;
-            directionalLight5.visible = 0.25;
+            directionalLight2.intensity = 0.25;
+            directionalLight3.intensity = 0.25;
+            directionalLight4.intensity = 0.25;
+            directionalLight5.intensity = 0.25;
             pointLight1.visible = true;
             pointLight2.visible = true;
             pointLight3.visible = true;
@@ -217,11 +217,11 @@
             scene.add(skyBox);
           }
           else {
-            directionalLight1.visible = 0.75;
-            directionalLight2.visible = 0.75;
-            directionalLight3.visible = 0.75;
-            directionalLight4.visible = 0.75;
-            directionalLight5.visible = 0.75;
+            directionalLight1.intensity = 0.75;
+            directionalLight2.intensity = 0.75;
+            directionalLight3.intensity = 0.75;
+            directionalLight4.intensity = 0.75;
+            directionalLight5.intensity = 0.75;
             pointLight1.visible = false;
             pointLight2.visible = false;
             pointLight3.visible = false;
