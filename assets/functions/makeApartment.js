@@ -35,7 +35,7 @@ function makeApartment() {
       apartment.add(makeTvs());
 
       apartment.rotation.x = Math.PI;
-      apartment.position.set(0,0,0);
+      apartment.position.set(50,50,0);
       apartment.scale.set(3,3,3);
       
       return apartment;
