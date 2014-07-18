@@ -418,7 +418,7 @@ function makeRemoteControl(){
 	}
 
 	remoteControl_Box.rotation.y = Math.PI/2;
-	remoteControl_Box.position.set(0,5,5);
+	remoteControl_Box.position.set(7,0.5,3);
 
 	return remoteControl_Box;
  
