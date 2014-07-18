@@ -411,7 +411,7 @@ function makeSpeakers() {
 	speaker1.position.set(14,9,0.2);
 	speaker2.position.set(12.5,9,0.2);
 
-	alfa = 1;
+	alfa = 0.1;
 
 	speaker1.onPlay = false;
 	speaker2.onPlay = false;
