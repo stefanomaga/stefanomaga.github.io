@@ -140,24 +140,24 @@ function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, 
 
 	var tv1Geometry = new THREE.PlaneGeometry( x, y);
 	var tv1Material = new THREE.MeshBasicMaterial( { map: videoTexture1, overdraw: true } );	
-	tv2A = new THREE.Mesh(tv1Geometry,tv1Material);
+	var tva = new THREE.Mesh(tv1Geometry,tv1Material);
 
 	var tv2Geometry = new THREE.PlaneGeometry( x, y);
 	var tv2Material = new THREE.MeshBasicMaterial( { map: videoTexture2, overdraw: true } );	
-	tv2B = new THREE.Mesh(tv2Geometry,tv2Material);
+	var tvb = new THREE.Mesh(tv2Geometry,tv2Material);
 
 	var tv3Geometry = new THREE.PlaneGeometry( x, y);
 	var tv3Material = new THREE.MeshBasicMaterial( { map: videoTexture3, overdraw: true } );	
-	tv2C = new THREE.Mesh(tv3Geometry,tv3Material);
+	var tvc = new THREE.Mesh(tv3Geometry,tv3Material);
 
 	var tv4Geometry = new THREE.PlaneGeometry( x, y);
 	var tv4Material = new THREE.MeshBasicMaterial( { map: videoTexture4, overdraw: true } );	
-	tv2D = new THREE.Mesh(tv4Geometry,tv4Material);
+	var tvd = new THREE.Mesh(tv4Geometry,tv4Material);
 
-	tv.tva = tv2A;
-	tv.tvb = tv2B;
-	tv.tvc = tv2C;
-	tv.tvd = tv2D;
+	tv.tva = tva;
+	tv.tvb = tvb;
+	tv.tvc = tvc;
+	tv.tvd = tvd;
 
 	tv.tva.video = video1;
 	tv.tvb.video = video2;
@@ -221,11 +221,35 @@ function makeTvs() {
 	tvs.add(tv1);
 
 	tv2 = makeSpecialTv(1,0.55,video1,videoTexture1,video5,videoTexture5,video6,videoTexture6,video7,videoTexture7);
-	tv2.position.set(13, 9.2, 1.25);
-	tv2.rotation.x = -Math.PI/2;
-	tv2.rotation.z = Math.PI;
-	tv2.rotation.y = Math.PI;
-	tvs.add(tv2);
+	tv2A = tv2.tva;
+	tv2B = tv2.tvb;
+	tv2C = tv2.tvc;
+	tv2D = tv2.tvd;
+	
+	tv2A.position.set(13, 9.2, 1.25);
+	tv2A.rotation.x = -Math.PI/2;
+	tv2A.rotation.z = Math.PI;
+	tv2A.rotation.y = Math.PI;
+	
+	tv2B.position.set(13, 9.2, 1.25);
+	tv2B.rotation.x = -Math.PI/2;
+	tv2B.rotation.z = Math.PI;
+	tv2B.rotation.y = Math.PI;
+		
+	tv2C.position.set(13, 9.2, 1.25);
+	tv2C.rotation.x = -Math.PI/2;
+	tv2C.rotation.z = Math.PI;
+	tv2C.rotation.y = Math.PI;
+		
+	tv2D.position.set(13, 9.2, 1.25);
+	tv2D.rotation.x = -Math.PI/2;
+	tv2D.rotation.z = Math.PI;
+	tv2D.rotation.y = Math.PI;
+	
+	tvs.add(tv2A);
+	tvs.add(tv2B);
+	tvs.add(tv2C);
+	tvs.add(tv2D);
 
 	tv3 = makeTv(0.6,0.3,video3,videoTexture3);
 	// tv3.position.set(6.11, 11.52, 1.138);
