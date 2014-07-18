@@ -424,14 +424,14 @@ function makeSpeakers() {
 			console.log("Speakers OFF");
 			speaker1.onPlay = false;
 			speaker2.onPlay = false;
-			alfa = 1;
+			alfa = 0.5;
 		}
 		else {
 			if(!speaker1.onPlay || !speaker2.onPlay) {
 				console.log("Speakers ON");
 				speaker1.onPlay = true;
 				speaker2.onPlay = true;
-				alfa = 10;
+				alfa = 1;
 			}
 		}
 	}
