@@ -77,6 +77,29 @@ function objLoader2(obj,scaleX,scaleY,scaleZ,x,y,z, rotationX, rotationY, rotati
   ); 
 }
 
+function objLoaderAnimated(obj,scale,x,y,z, rotationX, rotationY, rotationZ, parent) {
+  var loader = new THREE.OBJMTLLoader();
+  loader.addEventListener('load', function (event) {
+    var object = event.content;
+
+    object.scale.set(scale, scale, scale);
+    object.position.set(x, y, z);
+    object.rotation.x = rotationX;
+    object.rotation.y = rotationY;
+    object.rotation.z = rotationZ;
+
+    parent.add(object)
+    objects3D.add(parent);
+  });
+
+
+  loader.load(
+    'assets/models/' + obj + '.obj', 
+    'assets/models/' + obj + '.mtl', 
+    {side: THREE.DoubleSide}
+  );
+}
+
 function makeGrid() {
   var gridGeometry = new THREE.PlaneGeometry(100,100,100,100);
   var gridMaterial = new THREE.MeshPhongMaterial({ wireframe: true });
