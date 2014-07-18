@@ -13,8 +13,8 @@ function makeObjects() {
 	objLoader('interrupteur', 0.01, 9.2,9.48,1.2, Math.PI/2,0,0);
 	objLoader('interrupteur', 0.01, 9.3,9.48,1.2, Math.PI/2,0,0);
 	objLoader('remote', 0.05, 12,7.5,0.5, Math.PI/2,Math.PI/2,0);
-	objLoader('speaker3', 0.01, 14,9,0, Math.PI/2,Math.PI/2,Math.PI/2);
-	objLoader('speaker3', 0.01, 12,9,0, Math.PI/2,Math.PI/2,Math.PI/2);
+	objLoader('speaker3', 0.01, 14,9,0, Math.PI/2,0,0);
+	objLoader('speaker3', 0.01, 12,9,0, Math.PI/2,0,0);
 
 	// var tizioGeometry = new THREE.BoxGeometry(0.1,0.3,0.1);
 	// var tizioMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 0});
