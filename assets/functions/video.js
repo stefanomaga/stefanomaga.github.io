@@ -405,7 +405,7 @@ function makeSpeakers() {
 	var speakers = new THREE.Object3D();
 
 	var speakerGeometry = new THREE.BoxGeometry(0.5,0.5,1);
-	var speakerMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 1});
+	var speakerMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 0});
 	speaker1 = new THREE.Mesh(speakerGeometry, speakerMaterial);
 	speaker2 = new THREE.Mesh(speakerGeometry, speakerMaterial);
 	speaker1.position.set(14,9,0.2);
@@ -426,11 +426,13 @@ function makeSpeakers() {
 			speaker2.onPlay = false;
 			alfa = 1;
 		}
-		if(!speaker1.onPlay || !speaker2.onPlay) {
-			console.log("Speakers OFF");
-			speaker1.onPlay = true;
-			speaker2.onPlay = true;
-			alfa = 2;
+		else {
+			if(!speaker1.onPlay || !speaker2.onPlay) {
+				console.log("Speakers OFF");
+				speaker1.onPlay = true;
+				speaker2.onPlay = true;
+				alfa = 2;
+			}
 		}
 	}
 
