@@ -179,45 +179,57 @@ function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, 
 		// console.log(this.parent);
 		// console.log(this.parent.tva);
 		// console.log(this.parent.tva.video);
+
 		if (tv2.tva.video.onPlay) {
 			console.log("PAUSE 1");
 			tv2.tva.video.onPlay = false;
 			tv2.tva.video.pause();
 		}
+		else {
+			if ((!tv2.tva.video.onPlay) && tv2.tva.visible ){
+				console.log("PLAY 1");
+				tv2.tva.video.onPlay = true;
+				tv2.tva.video.play();
+			}
+		}
+
 		if (tv2.tvb.video.onPlay) {
 			console.log("PAUSE 2");
 			tv2.tvb.video.onPlay = false;
 			tv2.tvb.video.pause();
 		}
+		else {
+			if ((!tv2.tvb.video.onPlay) && tv2.tvb.visible ){
+				console.log("PLAY 2");
+				tv2.tvb.video.onPlay = true;
+				tv2.tvb.video.play();
+			}
+		}
+
 		if (tv2.tvc.video.onPlay) {
 			console.log("PAUSE 3");
 			tv2.tvc.video.onPlay = false;
 			tv2.tvc.video.pause();
 		}
+		else {
+			if ((!tv2.tvc.video.onPlay) && tv2.tvc.visible ){
+				console.log("PLAY 3");
+				tv2.tvc.video.onPlay = true;
+				tv2.tvc.video.play();
+			}
+		}
+
 		if (tv2.tvd.video.onPlay) {
 			console.log("PAUSE 4");
 			tv2.tvd.video.onPlay = false;
 			tv2.tvd.video.pause();
 		}
-		if ((!tv2.tva.video.onPlay) && tv2.tva.visible ){
-			console.log("PLAY 1");
-			tv2.tva.video.onPlay = true;
-			tv2.tva.video.play();
-		}
-		if ((!tv2.tvb.video.onPlay) && tv2.tvb.visible ){
-			console.log("PLAY 2");
-			tv2.tvb.video.onPlay = true;
-			tv2.tvb.video.play();
-		}
-		if ((!tv2.tvc.video.onPlay) && tv2.tvc.visible ){
-			console.log("PLAY 3");
-			tv2.tvc.video.onPlay = true;
-			tv2.tvc.video.play();
-		}
-		if ((!tvd.video.onPlay) && tvd.visible ){
-			console.log("PLAY 4");
-			tvd.video.onPlay = true;
-			tvd.video.play();
+		else {
+			if ((!tvd.video.onPlay) && tvd.visible ){
+				console.log("PLAY 4");
+				tvd.video.onPlay = true;
+				tvd.video.play();
+			}
 		}
 			console.log(tv2.tva.visible);
 			console.log(tv2.tvb.visible);
