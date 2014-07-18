@@ -421,14 +421,14 @@ function makeSpeakers() {
 
 	speaker1.interact =  speaker2.interact = function() {
 		if(speaker1.onPlay || speaker2.onPlay){
-			console.log("Speakers ON");
+			console.log("Speakers OFF");
 			speaker1.onPlay = false;
 			speaker2.onPlay = false;
 			alfa = 1;
 		}
 		else {
 			if(!speaker1.onPlay || !speaker2.onPlay) {
-				console.log("Speakers OFF");
+				console.log("Speakers ON");
 				speaker1.onPlay = true;
 				speaker2.onPlay = true;
 				alfa = 10;
@@ -442,7 +442,7 @@ function makeSpeakers() {
 
 function updateAudioTV2() {
 		var distance = tv2.position.distanceTo((!window.location.pointLock) ? camera.position : controlsFPS.getObject().position); 
-		if(distance <= 30) {
+		if(distance <= 30 + 3*alfa) {
 			tv2.tva.video.volume = alfa * ( 1 - distance/30 );
 			tv2.tvb.video.volume = alfa * ( 1 - distance/30 );
 			tv2.tvc.video.volume = alfa * ( 1 - distance/30 );
