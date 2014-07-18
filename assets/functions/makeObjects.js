@@ -12,7 +12,7 @@ function makeObjects() {
 	objLoader('track-lights', 0.1, 13,7,2.7, Math.PI/2,-Math.PI/2,0);
 	objLoader('interrupteur', 0.01, 9.2,9.48,1.2, Math.PI/2,0,0);
 	objLoader('interrupteur', 0.01, 9.3,9.48,1.2, Math.PI/2,0,0);
-	// objLoader('TV Remote', 0.001, 11.3,8.48,1.2, Math.PI/2,0,0);
+	objLoader('remote', 0.001, 11.3,8.48,1.2, Math.PI/2,0,0);
 
 	//BEDROOM1
 	objLoader('office_chair', 0.6, 5.5,13.5,0.2, Math.PI/2,Math.PI/2,0);
