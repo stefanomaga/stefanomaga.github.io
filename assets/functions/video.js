@@ -64,7 +64,7 @@
 		videoTexture4.magFilter = THREE.LinearFilter;	
 
 	video5 = document.createElement( 'video' );
-		video5.src = "assets/movies/Aladdin.mp4";
+		video5.src = "assets/movies/Aladin.mp4";
 		video5.onPlay = false;
 
 	videoImage5 = document.createElement( 'canvas' );
@@ -169,7 +169,7 @@ function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, 
 	tv.tvc.visible = false;
 	tv.tvd.visible = false;
 
-	tv.tva.interact = tv.tvb.interact = tv.tvc.interact = tv.tvd.interact = function() {
+	tv2A.interact = tv2B.interact = tv2C.interact = tv2D.interact = function() {
 		console.log("Interact");
 
 		if (this.parent.tva.video.onPlay) {
