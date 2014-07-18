@@ -329,49 +329,55 @@ function makeRemoteControl(){
 
 			tv2.tvb.video.play();
 		} 
-		if(tv2.tvb.video.onPlay){
-			console.log("2->3");
-			tv2.tva.visible = false;
-			tv2.tvb.visible = false;
-			tv2.tvc.visible = true;
-			tv2.tvd.visible = false;
-			
-			tv2.tvb.video.pause();
-			tv2.tvb.video.onPlay = false;
-			tv2.tvc.video.play();
-			tv2.tvc.video.onPlay = true;
-		}
-		if(tv2.tvc.video.onPlay){
-			console.log("3->4");
-			tv2.tva.visible = false;
-			tv2.tvb.visible = false;
-			tv2.tvc.visible = true;
-			tv2.tvd.visible = false;
-			
-			tv2.tvc.video.pause();
-			tv2.tvc.video.onPlay = false;
-			tv2.tvd.video.play();
-			tv2.tvd.video.onPlay = true;
-		}
-		if(tv2.tvd.video.onPlay){
-			console.log("4->X");
-			tv2.tva.visible = true;
-			tv2.tvb.visible = false;
-			tv2.tvc.visible = false;
-			tv2.tvd.visible = false;
-			
-			tv2.tvd.video.pause();
-			tv2.tvd.video.onPlay = false;
-		}
 		else {
-			console.log("ON da telecoando");
-			tv2.tva.visible = true;
-			tv2.tvb.visible = false;
-			tv2.tvc.visible = false;
-			tv2.tvd.visible = false;
-			
-			tv2.tva.video.play();
-			tv2.tva.video.onPlay = true;
+			if(tv2.tvb.video.onPlay){
+				console.log("2->3");
+				tv2.tva.visible = false;
+				tv2.tvb.visible = false;
+				tv2.tvc.visible = true;
+				tv2.tvd.visible = false;
+				
+				tv2.tvb.video.pause();
+				tv2.tvb.video.onPlay = false;
+				tv2.tvc.video.play();
+				tv2.tvc.video.onPlay = true;
+			}
+			else {
+				if(tv2.tvc.video.onPlay){
+					console.log("3->4");
+					tv2.tva.visible = false;
+					tv2.tvb.visible = false;
+					tv2.tvc.visible = true;
+					tv2.tvd.visible = false;
+					
+					tv2.tvc.video.pause();
+					tv2.tvc.video.onPlay = false;
+					tv2.tvd.video.play();
+					tv2.tvd.video.onPlay = true;
+				}
+				else {
+					if(tv2.tvd.video.onPlay){
+						console.log("4->X");
+						tv2.tva.visible = true;
+						tv2.tvb.visible = false;
+						tv2.tvc.visible = false;
+						tv2.tvd.visible = false;
+						
+						tv2.tvd.video.pause();
+						tv2.tvd.video.onPlay = false;
+					}
+					else {
+						console.log("ON da telecoando");
+						tv2.tva.visible = true;
+						tv2.tvb.visible = false;
+						tv2.tvc.visible = false;
+						tv2.tvd.visible = false;
+						
+						tv2.tva.video.play();
+						tv2.tva.video.onPlay = true;
+					}
+				}
+			}
 		}	
 	}
 
