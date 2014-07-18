@@ -431,7 +431,7 @@ function makeSpeakers() {
 				console.log("Speakers OFF");
 				speaker1.onPlay = true;
 				speaker2.onPlay = true;
-				alfa = 2;
+				alfa = 10;
 			}
 		}
 	}
@@ -443,10 +443,10 @@ function makeSpeakers() {
 function updateAudioTV2() {
 		var distance = tv2.position.distanceTo((!window.location.pointLock) ? camera.position : controlsFPS.getObject().position); 
 		if(distance <= 30) {
-			tv2.tva.video.volume = alfa * ( alfa - distance/30 );
-			tv2.tvb.video.volume = alfa * ( alfa - distance/30 );
-			tv2.tvc.video.volume = alfa * ( alfa - distance/30 );
-			tv2.tvd.video.volume = alfa * ( alfa - distance/30 );
+			tv2.tva.video.volume = alfa * ( 1 - distance/30 );
+			tv2.tvb.video.volume = alfa * ( 1 - distance/30 );
+			tv2.tvc.video.volume = alfa * ( 1 - distance/30 );
+			tv2.tvd.video.volume = alfa * ( 1 - distance/30 );
 		}
 		else {
 			tv2.tva.video.volume = 0;
