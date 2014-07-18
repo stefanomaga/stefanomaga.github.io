@@ -136,53 +136,71 @@ function makeTv(x,y, video,videoTexture) {
 }
 
 function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, videoTexture3, video4, videoTexture4) {
+	var tv = new THREE.Object3D();
 
-	var tvGeometry = new THREE.PlaneGeometry( x, y);
-	var tvMaterial = new THREE.MeshBasicMaterial( { map: videoTexture, overdraw: true } );	
-	var tv = new THREE.Mesh(tvGeometry,tvMaterial);
-	tv.video1 = video1;
-	tv.video2 = video2;
-	tv.video3 = video3;
-	tv.video4 = video4;
+	var tv1Geometry = new THREE.PlaneGeometry( x, y);
+	var tv1Material = new THREE.MeshBasicMaterial( { map: videoTexture1, overdraw: true } );	
+	var tv1 = new THREE.Mesh(tv1Geometry,tv1Material);
 
-	tv.video1.visible = true;
-	tv.video2.visible = false;
-	tv.video3.visible = false;
-	tv.video4.visible = false;
-	// tv.visible = false;
+	var tv2Geometry = new THREE.PlaneGeometry( x, y);
+	var tv2Material = new THREE.MeshBasicMaterial( { map: videoTexture2, overdraw: true } );	
+	var tv2 = new THREE.Mesh(tv2Geometry,tv2Material);
+
+	var tv3Geometry = new THREE.PlaneGeometry( x, y);
+	var tv3Material = new THREE.MeshBasicMaterial( { map: videoTexture3, overdraw: true } );	
+	var tv3 = new THREE.Mesh(tv3Geometry,tv3Material);
+
+	var tv4Geometry = new THREE.PlaneGeometry( x, y);
+	var tv4Material = new THREE.MeshBasicMaterial( { map: videoTexture4, overdraw: true } );	
+	var tv4 = new THREE.Mesh(tv4Geometry,tv4Material);
+
+	tv1.video = video1;
+	tv2.video = video2;
+	tv3.video = video3;
+	tv4.video = video4;
+
+	tv1.video.visible = true;
+	tv2.video.visible = false;
+	tv3.video.visible = false;
+	tv4.video.visible = false;
+
+	tv.tv1 = tv1;
+	tv.tv2 = tv2;
+	tv.tv3 = tv3;
+	tv.tv4 = tv4;
 
 	tv.interact = function() {
-		if (tv.video1.onPlay) {
-			tv.video1.pause();
-			tv.video1.onPlay = false;
+		if (tv.tv1.video.onPlay) {
+			tv.tv1.video.pause();
+			tv.tv1.video.onPlay = false;
 		}
-		if (tv.video2.onPlay) {
-			tv.video2.pause();
-			tv.video2.onPlay = false;
+		if (tv.tv2.video.onPlay) {
+			tv.tv2.video.pause();
+			tv.tv2.video.onPlay = false;
 		}
-		if (tv.video3.onPlay) {
-			tv.video3.pause();
-			tv.video3.onPlay = false;
+		if (tv.tv3.video.onPlay) {
+			tv.tv3.video.pause();
+			tv.tv3.video.onPlay = false;
 		}
-		if (tv.video4.onPlay) {
-			tv.video4.pause();
-			tv.video4.onPlay = false;
+		if (tv.tv4.video.onPlay) {
+			tv.tv4.video.pause();
+			tv.tv4.video.onPlay = false;
 		}
-		if ((!tv.video1.onPlay) && tv.video1.visible ){
-			tv.video1.play();
-			tv.video1.onPlay = true;
+		if ((!tv.tv1.video.onPlay) && tv.tv1.video.visible ){
+			tv.tv1.video.play();
+			tv.tv1.video.onPlay = true;
 		}
-		if ((!tv.video2.onPlay) && tv.video2.visible ){
-			tv.video2.play();
-			tv.video2.onPlay = true;
+		if ((!tv.tv2.video.onPlay) && tv.tv2.video.visible ){
+			tv.tv2.video.play();
+			tv.tv2.video.onPlay = true;
 		}
-		if ((!tv.video3.onPlay) && tv.video3.visible ){
-			tv.video3.play();
-			tv.video3.onPlay = true;
+		if ((!tv.tv3.video.onPlay) && tv.tv3.video.visible ){
+			tv.tv3.video.play();
+			tv.tv3.video.onPlay = true;
 		}
-		if ((!tv.video4.onPlay) && tv.video4.visible ){
-			tv.video4.play();
-			tv.video4.onPlay = true;
+		if ((!tv.tv4.video.onPlay) && tv.tv4.video.visible ){
+			tv.tv4.video.play();
+			tv.tv4.video.onPlay = true;
 		}
 	}	
 
