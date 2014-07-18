@@ -140,70 +140,70 @@ function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, 
 
 	var tv1Geometry = new THREE.PlaneGeometry( x, y);
 	var tv1Material = new THREE.MeshBasicMaterial( { map: videoTexture1, overdraw: true } );	
-	var tv1 = new THREE.Mesh(tv1Geometry,tv1Material);
+	tv2A = new THREE.Mesh(tv1Geometry,tv1Material);
 
 	var tv2Geometry = new THREE.PlaneGeometry( x, y);
 	var tv2Material = new THREE.MeshBasicMaterial( { map: videoTexture2, overdraw: true } );	
-	var tv2 = new THREE.Mesh(tv2Geometry,tv2Material);
+	tv2B = new THREE.Mesh(tv2Geometry,tv2Material);
 
 	var tv3Geometry = new THREE.PlaneGeometry( x, y);
 	var tv3Material = new THREE.MeshBasicMaterial( { map: videoTexture3, overdraw: true } );	
-	var tv3 = new THREE.Mesh(tv3Geometry,tv3Material);
+	tv2C = new THREE.Mesh(tv3Geometry,tv3Material);
 
 	var tv4Geometry = new THREE.PlaneGeometry( x, y);
 	var tv4Material = new THREE.MeshBasicMaterial( { map: videoTexture4, overdraw: true } );	
-	var tv4 = new THREE.Mesh(tv4Geometry,tv4Material);
+	tv2D = new THREE.Mesh(tv4Geometry,tv4Material);
 
-	tv.tv1 = tv1;
-	tv.tv2 = tv2;
-	tv.tv3 = tv3;
-	tv.tv4 = tv4;
+	tv.tva = tv2A;
+	tv.tvb = tv2B;
+	tv.tvc = tv2C;
+	tv.tvd = tv2D;
 
-	tv.tv1.video = video1;
-	tv.tv2.video = video2;
-	tv.tv3.video = video3;
-	tv.tv4.video = video4;
+	tv.tva.video = video1;
+	tv.tvb.video = video2;
+	tv.tvc.video = video3;
+	tv.tvd.video = video4;
 
-	tv.tv1.visible = true;
-	tv.tv2.visible = false;
-	tv.tv3.visible = false;
-	tv.tv4.visible = false;
+	tv.tva.visible = true;
+	tv.tvb.visible = false;
+	tv.tvc.visible = false;
+	tv.tvd.visible = false;
 
-	tv.tv1.interact = tv.tv2.interact = tv.tv3.interact = tv.tv4.interact = function() {
+	tv.tva.interact = tv.tvb.interact = tv.tvc.interact = tv.tvd.interact = function() {
 		console.log("Interact");
 
-		if (this.parent.tv1.video.onPlay) {
-			this.parent.tv1.video.pause();
-			this.parent.tv1.video.onPlay = false;
+		if (this.parent.tva.video.onPlay) {
+			this.parent.tva.video.pause();
+			this.parent.tva.video.onPlay = false;
 		}
-		if (this.parent.tv2.video.onPlay) {
-			this.parent.tv2.video.pause();
-			this.parent.tv2.video.onPlay = false;
+		if (this.parent.tvb.video.onPlay) {
+			this.parent.tvb.video.pause();
+			this.parent.tvb.video.onPlay = false;
 		}
-		if (this.parent.tv3.video.onPlay) {
-			this.parent.tv3.video.pause();
-			this.parent.tv3.video.onPlay = false;
+		if (this.parent.tvc.video.onPlay) {
+			this.parent.tvc.video.pause();
+			this.parent.tvc.video.onPlay = false;
 		}
-		if (this.parent.tv4.video.onPlay) {
-			this.parent.tv4.video.pause();
-			this.parent.tv4.video.onPlay = false;
+		if (this.parent.tvd.video.onPlay) {
+			this.parent.tvd.video.pause();
+			this.parent.tvd.video.onPlay = false;
 		}
-		if ((!this.parent.tv1.video.onPlay) && this.parent.tv1.video.visible ){
-			this.parent.tv1.video.play();
-			this.parent.tv1.video.onPlay = true;
+		if ((!this.parent.tva.video.onPlay) && this.parent.tva.video.visible ){
+			this.parent.tva.video.play();
+			this.parent.tva.video.onPlay = true;
 			console.log("Play Video1");
 		}
-		if ((!this.parent.tv2.video.onPlay) && this.parent.tv2.video.visible ){
-			this.parent.tv2.video.play();
-			this.parent.tv2.video.onPlay = true;
+		if ((!this.parent.tvb.video.onPlay) && this.parent.tvb.video.visible ){
+			this.parent.tvb.video.play();
+			this.parent.tvb.video.onPlay = true;
 		}
-		if ((!this.parent.tv3.video.onPlay) && this.parent.tv3.video.visible ){
-			this.parent.tv3.video.play();
-			this.parent.tv3.video.onPlay = true;
+		if ((!this.parent.tvc.video.onPlay) && this.parent.tvc.video.visible ){
+			this.parent.tvc.video.play();
+			this.parent.tvc.video.onPlay = true;
 		}
-		if ((!this.parent.tv4.video.onPlay) && this.parent.tv4.video.visible ){
-			this.parent.tv4.video.play();
-			this.parent.tv4.video.onPlay = true;
+		if ((!this.parent.tvd.video.onPlay) && this.parent.tvd.video.visible ){
+			this.parent.tvd.video.play();
+			this.parent.tvd.video.onPlay = true;
 		}
 	}	
 
@@ -253,56 +253,56 @@ function makeRemoteControl(){
 
 	remoteControl_Box.interact = function() {
 		console.log("Remote Control Interact");
-		if (tv2.tv1.video.onPlay) {
-			tv2.tv1.visible = false;
-			tv2.tv2.visible = true;
-			tv2.tv3.visible = false;
-			tv2.tv4.visible = false;
+		if (tv2.tva.video.onPlay) {
+			tv2.tva.visible = false;
+			tv2.tvb.visible = true;
+			tv2.tvc.visible = false;
+			tv2.tvd.visible = false;
 			
-			tv2.tv1.video.pause();
-			tv2.tv1.video.onPlay = false;
-			tv2.tv2.video.play();
-			tv2.tv2.video.onPlay = true;
+			tv2.tva.video.pause();
+			tv2.tva.video.onPlay = false;
+			tv2.tvb.video.play();
+			tv2.tvb.video.onPlay = true;
 		} 
-		if(tv2.tv2.video.onPlay){
-			tv2.tv1.visible = false;
-			tv2.tv2.visible = false;
-			tv2.tv3.visible = true;
-			tv2.tv4.visible = false;
+		if(tv2.tvb.video.onPlay){
+			tv2.tva.visible = false;
+			tv2.tvb.visible = false;
+			tv2.tvc.visible = true;
+			tv2.tvd.visible = false;
 			
-			tv2.tv2.video.pause();
-			tv2.tv2.video.onPlay = false;
-			tv2.tv3.video.play();
-			tv2.tv3.video.onPlay = true;
+			tv2.tvb.video.pause();
+			tv2.tvb.video.onPlay = false;
+			tv2.tvc.video.play();
+			tv2.tvc.video.onPlay = true;
 		}
-		if(tv2.tv3.video.onPlay){
-			tv2.tv1.visible = false;
-			tv2.tv2.visible = false;
-			tv2.tv3.visible = true;
-			tv2.tv4.visible = false;
+		if(tv2.tvc.video.onPlay){
+			tv2.tva.visible = false;
+			tv2.tvb.visible = false;
+			tv2.tvc.visible = true;
+			tv2.tvd.visible = false;
 			
-			tv2.tv3.video.pause();
-			tv2.tv3.video.onPlay = false;
-			tv2.tv4.video.play();
-			tv2.tv4.video.onPlay = true;
+			tv2.tvc.video.pause();
+			tv2.tvc.video.onPlay = false;
+			tv2.tvd.video.play();
+			tv2.tvd.video.onPlay = true;
 		}
-		if(tv2.tv4.video.onPlay){
-			tv2.tv1.visible = true;
-			tv2.tv2.visible = false;
-			tv2.tv3.visible = false;
-			tv2.tv4.visible = false;
+		if(tv2.tvd.video.onPlay){
+			tv2.tva.visible = true;
+			tv2.tvb.visible = false;
+			tv2.tvc.visible = false;
+			tv2.tvd.visible = false;
 			
-			tv2.tv4.video.pause();
-			tv2.tv4.video.onPlay = false;
+			tv2.tvd.video.pause();
+			tv2.tvd.video.onPlay = false;
 		}
 		else {
-			tv2.tv1.visible = true;
-			tv2.tv2.visible = false;
-			tv2.tv3.visible = false;
-			tv2.tv4.visible = false;
+			tv2.tva.visible = true;
+			tv2.tvb.visible = false;
+			tv2.tvc.visible = false;
+			tv2.tvd.visible = false;
 			
-			tv2.tv1.video.play();
-			tv2.tv1.video.onPlay = true;
+			tv2.tva.video.play();
+			tv2.tva.video.onPlay = true;
 		}	
 	}
 
