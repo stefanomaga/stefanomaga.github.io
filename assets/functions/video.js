@@ -318,7 +318,15 @@ function makeRemoteControl(){
 			tv2.tva.video.onPlay = false;
 			tv2.tvb.video.onPlay = true;
 			
-			// tv2.tva.video.pause();
+			console.log(tv2.tva.visible);
+			console.log(tv2.tvb.visible);
+			console.log(tv2.tvc.visible);
+			console.log(tv2.tvd.visible);
+
+			tv2.tva.video.pause();
+
+			console.log("Va avanti?");
+
 			tv2.tvb.video.play();
 		} 
 		if(tv2.tvb.video.onPlay){
