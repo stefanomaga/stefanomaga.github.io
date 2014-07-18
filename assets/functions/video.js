@@ -345,8 +345,8 @@ function makeRemoteControl(){
 					console.log("3->4");
 					tv2.tva.visible = false;
 					tv2.tvb.visible = false;
-					tv2.tvc.visible = true;
-					tv2.tvd.visible = false;
+					tv2.tvc.visible = false;
+					tv2.tvd.visible = true;
 					
 					tv2.tvc.video.onPlay = false;
 					tv2.tvd.video.onPlay = true;
@@ -357,7 +357,7 @@ function makeRemoteControl(){
 				else {
 					if(tv2.tvd.video.onPlay){
 						console.log("4->X");
-						tv2.tva.visible = true;
+						tv2.tva.visible = false;
 						tv2.tvb.visible = false;
 						tv2.tvc.visible = false;
 						tv2.tvd.visible = false;
