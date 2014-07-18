@@ -367,15 +367,35 @@ function makeRemoteControl(){
 						tv2.tvd.video.pause();
 					}
 					else {
-						console.log("ON da telecoando");
-						tv2.tva.visible = true;
-						tv2.tvb.visible = false;
-						tv2.tvc.visible = false;
-						tv2.tvd.visible = false;
-						
-						tv2.tva.video.onPlay = true;
+						if(tv2.tva.visible || tv2.tvb.visible || tv2.tvc.visible || tv2.tvd.visible) {
+							if(tv2.tva.visible) {
+								tv2.tva.video.onPlay = true;
+								tv2.tva.video.play();
+							}
+							if(tv2.tvb.visible) {
+								tv2.tvb.video.onPlay = true;
+								tv2.tvb.video.play();
+							}
+							if(tv2.tvc.visible) {
+								tv2.tvc.video.onPlay = true;
+								tv2.tvc.video.play();
+							}
+							if(tv2.tvd.visible) {
+								tv2.tvd.video.onPlay = true;
+								tv2.tvd.video.play();
+							}
+						} 
+						else {
+							console.log("ON da telecoando");
+							tv2.tva.visible = true;
+							tv2.tvb.visible = false;
+							tv2.tvc.visible = false;
+							tv2.tvd.visible = false;
+							
+							tv2.tva.video.onPlay = true;
 
-						tv2.tva.video.play();
+							tv2.tva.video.play();
+						}	
 					}
 				}
 			}
