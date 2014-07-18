@@ -174,7 +174,7 @@ function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, 
 	tv.tvc.visible = false;
 	tv.tvd.visible = false;
 
-	tva.interact  = function() {
+	tva.interact = tvb.interact = tvc.interact = tvd.interact = function() {
 		console.log("Interact");
 
 		if (this.parent.tva.video.onPlay) {
