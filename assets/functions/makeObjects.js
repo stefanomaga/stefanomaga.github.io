@@ -63,16 +63,8 @@ function makeObjects() {
 	objLoader('chair4', 0.008, 4.25,9,0.3, Math.PI/2,0,0);
 	objLoader('hangingLight', 0.01, 4.5,8,2.7, Math.PI/2,-Math.PI/2,0);
 	objLoader('interrupteur', 0.01, 6.48,8.2,1.2, -Math.PI/2,-Math.PI/2,0);
-	objLoader('grillePain', 0.01, 6.48,8.2,1.2, -Math.PI/2,-Math.PI/2,0);
-	objLoader('toast', 0.01, 6.48,8.2,1.2, -Math.PI/2,-Math.PI/2,0);
-
-	var tizioGeometry = new THREE.BoxGeometry(0.1,0.3,0.1);
-	var tizioMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 0});
-	tizio = new THREE.Mesh(tizioGeometry, tizioMaterial);
-	tizio.position.set(6.25,6.75,0);
-	var helper = new THREE.AxisHelper(100);
-	tizio.add(helper);
-	objects3D.add(tizio);
+	objLoader('grillePain', 0.01, 6,6.75,0.5, -Math.PI/2,-Math.PI/2,0);
+	objLoader('toast', 0.01, 6,6.75,1, -Math.PI/2,-Math.PI/2,0);
 
 	// //BATHROOM1
 	// objLoader('hangingLight', 0.01, 4.5,5,2.7, Math.PI/2,-Math.PI/2,0);
