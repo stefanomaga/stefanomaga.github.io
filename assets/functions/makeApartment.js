@@ -42,7 +42,7 @@ function makeApartment() {
       apartment.add(makeRemoteControl());
 
       //Toaster
-      // apartment.add(makeToaster());
+      apartment.add(makeToaster());
 
       apartment.rotation.x = Math.PI;
       apartment.position.set(25,-25,0);
