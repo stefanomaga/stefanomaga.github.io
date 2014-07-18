@@ -408,8 +408,8 @@ function makeSpeakers() {
 	var speakerMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 1});
 	speaker1 = new THREE.Mesh(speakerGeometry, speakerMaterial);
 	speaker2 = new THREE.Mesh(speakerGeometry, speakerMaterial);
-	speaker1.position.set(13.5,9,0.2);
-	speaker2.position.set(12,9,0.2);
+	speaker1.position.set(14,9,0.2);
+	speaker2.position.set(12.5,9,0.2);
 
 	alfa = 1;
 
@@ -421,11 +421,13 @@ function makeSpeakers() {
 
 	speaker1.interact =  speaker2.interact = function() {
 		if(speaker1.onPlay || speaker2.onPlay){
+			console.log("Speakers ON");
 			speaker1.onPlay = false;
 			speaker2.onPlay = false;
 			alfa = 1;
 		}
 		if(!speaker1.onPlay || !speaker2.onPlay) {
+			console.log("Speakers OFF");
 			speaker1.onPlay = true;
 			speaker2.onPlay = true;
 			alfa = 2;
@@ -439,10 +441,10 @@ function makeSpeakers() {
 function updateAudioTV2() {
 		var distance = tv2.position.distanceTo((!window.location.pointLock) ? camera.position : controlsFPS.getObject().position); 
 		if(distance <= 30) {
-			tv2.tva.video.volume = alfa * ( 1 - distance/30 );
-			tv2.tvb.video.volume = alfa * ( 1 - distance/30 );
-			tv2.tvc.video.volume = alfa * ( 1 - distance/30 );
-			tv2.tvd.video.volume = alfa * ( 1 - distance/30 );
+			tv2.tva.video.volume = alfa * ( alfa - distance/30 );
+			tv2.tvb.video.volume = alfa * ( alfa - distance/30 );
+			tv2.tvc.video.volume = alfa * ( alfa - distance/30 );
+			tv2.tvd.video.volume = alfa * ( alfa - distance/30 );
 		}
 		else {
 			tv2.tva.video.volume = 0;
