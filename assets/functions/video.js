@@ -442,7 +442,7 @@ function makeSpeakers() {
 
 function updateAudioTV2() {
 		var distance = tv2.position.distanceTo((!window.location.pointLock) ? camera.position : controlsFPS.getObject().position); 
-		if(distance <= 30 + 3*alfa) {
+		if(distance <= 30) {
 			tv2.tva.video.volume = alfa * ( 1 - distance/30 );
 			tv2.tvb.video.volume = alfa * ( 1 - distance/30 );
 			tv2.tvc.video.volume = alfa * ( 1 - distance/30 );
