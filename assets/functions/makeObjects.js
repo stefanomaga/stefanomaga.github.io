@@ -1,10 +1,10 @@
 function makeObjects() {
 	objects3D = new THREE.Object3D();
 
-	var toasGeometry = new THREE.BoxGeometry(0.25,0.25,0.25);
-	var toasMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 1});
-	toast1 = new THREE.Mesh(toasGeometry, toasMaterial);
-	toast2 = new THREE.Mesh(toasGeometry, toasMaterial);
+	var toastGeometry = new THREE.BoxGeometry(0.25,0.25,0.25);
+	var toastMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 1});
+	toast1 = new THREE.Mesh(toastGeometry, toastMaterial);
+	toast2 = new THREE.Mesh(toastGeometry, toastMaterial);
 	toast1.position.set(6.15,6.75,1.5);	
 	toast2.position.set(5.9,6.75,1.5);	
 	objects3D.add(toast1);
@@ -73,8 +73,8 @@ function makeObjects() {
 	objLoader('hangingLight', 0.01, 4.5,8,2.7, Math.PI/2,-Math.PI/2,0);
 	objLoader('interrupteur', 0.01, 6.48,8.2,1.2, -Math.PI/2,-Math.PI/2,0);
 	objLoader('grillePain', 0.01, 6,6.75,1, -Math.PI/2,0,0);
-	objLoader('toast', 0.01, 6.15,6.75,1.5, -Math.PI/2,0,Math.PI/2, toast1);
-	objLoader('toast', 0.01, 5.9,6.75,1.5, -Math.PI/2,0,Math.PI/2, toast2);
+	objLoaderAnimated('toast', 0.01, 6.15,6.75,1.5, -Math.PI/2,0,Math.PI/2, toast1);
+	objLoaderAnimated('toast', 0.01, 5.9,6.75,1.5, -Math.PI/2,0,Math.PI/2, toast2);
 
 	// //BATHROOM1
 	// objLoader('hangingLight', 0.01, 4.5,5,2.7, Math.PI/2,-Math.PI/2,0);
