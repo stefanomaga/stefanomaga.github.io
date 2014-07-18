@@ -154,6 +154,11 @@ function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, 
 	var tv4Material = new THREE.MeshBasicMaterial( { map: videoTexture4, overdraw: true } );	
 	var tvd = new THREE.Mesh(tv4Geometry,tv4Material);
 
+	tv.add(tva);
+	tv.add(tvb);
+	tv.add(tvc);
+	tv.add(tvd);
+
 	tv.tva = tva;
 	tv.tvb = tvb;
 	tv.tvc = tvc;
@@ -280,7 +285,7 @@ function makeRemoteControl(){
 		console.log("Remote Control Interact");
 		if (tv2.tva.video.onPlay) {
 			console.log("1->2");
-			tv2.tva.video.visible = false;
+			tv2.tva.visible = false;
 			tv2.tvb.visible = true;
 			tv2.tvc.visible = false;
 			tv2.tvd.visible = false;
