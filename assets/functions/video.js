@@ -180,35 +180,42 @@ function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, 
 		// console.log(this.parent.tva);
 		// console.log(this.parent.tva.video);
 		if (tv2.tva.video.onPlay) {
+			console.log("PAUSE 1");
 			tv2.tva.video.pause();
 			tv2.tva.video.onPlay = false;
 		}
 		if (tv2.tvb.video.onPlay) {
+			console.log("PAUSE 2");
 			tv2.tvb.video.pause();
 			tv2.tvb.video.onPlay = false;
 		}
 		if (tv2.tvc.video.onPlay) {
+			console.log("PAUSE 3");
 			tv2.tvc.video.pause();
 			tv2.tvc.video.onPlay = false;
 		}
 		if (tv2.tvd.video.onPlay) {
+			console.log("PAUSE 4");
 			tv2.tvd.video.pause();
 			tv2.tvd.video.onPlay = false;
 		}
 		if ((!tv2.tva.video.onPlay) && tv2.tva.video.visible ){
+			console.log("PLAY 1");
 			tv2.tva.video.play();
 			tv2.tva.video.onPlay = true;
-			console.log("Play Video1");
 		}
 		if ((!tv2.tvb.video.onPlay) && tv2.tvb.video.visible ){
+			console.log("PLAY 2");
 			tv2.tvb.video.play();
 			tv2.tvb.video.onPlay = true;
 		}
 		if ((!tv2.tvc.video.onPlay) && tv2.tvc.video.visible ){
+			console.log("PLAY 3");
 			tv2.tvc.video.play();
 			tv2.tvc.video.onPlay = true;
 		}
 		if ((!tvd.video.onPlay) && tvd.video.visible ){
+			console.log("PLAY 4");
 			tvd.video.play();
 			tvd.video.onPlay = true;
 		}
