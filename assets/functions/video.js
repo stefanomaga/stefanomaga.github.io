@@ -329,6 +329,7 @@ function makeRemoteControl(){
 		else {
 			if(tv2.tvb.video.onPlay){
 				console.log("2->3");
+				console.log(tv2.tva.video.onPlay);
 				tv2.tva.visible = false;
 				tv2.tvb.visible = false;
 				tv2.tvc.visible = true;
