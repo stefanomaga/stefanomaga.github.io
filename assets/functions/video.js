@@ -400,3 +400,19 @@ function makeRemoteControl(){
 	return remoteControl_Box;
  
 }
+
+function updateAudioTV() {
+		var distance = tv2.position.distanceTo((!window.location.pointLock) ? camera.position : controlsFPS.getObject().position); 
+		if(distance <= 30) {
+			tv2.tva.video.volume = 1 * ( 1 - distance/30 );
+			tv2.tvb.video.volume = 1 * ( 1 - distance/30 );
+			tv2.tvc.video.volume = 1 * ( 1 - distance/30 );
+			tv2.tvd.video.volume = 1 * ( 1 - distance/30 );
+		}
+		else {
+			tv2.tva.video.volume = 0;
+			tv2.tvb.video.volume = 0;
+			tv2.tvc.video.volume = 0;
+			tv2.tvd.video.volume = 0;
+	}
+}

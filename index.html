@@ -117,7 +117,7 @@
     // once everything is loaded, we run our Three.js stuff.
     $(function () {
       var stats = initStats();
-            console.log("100");
+            console.log("101");
 
       // create a scene
       scene = new THREE.Scene();
@@ -263,6 +263,7 @@
         trackballControls.update();
         
         updateAudio();
+        updateAudioTV();
 
         if ( video1.readyState === video1.HAVE_ENOUGH_DATA ) {
           videoImageContext1.drawImage( video1, 0, 0 );
