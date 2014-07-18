@@ -280,7 +280,7 @@ function makeTvs() {
 function makeRemoteControl(){
 
 	var remoteControlGeometry = new THREE.BoxGeometry(0.1,0.3,0.1);
-	var remoteControlMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 1});
+	var remoteControlMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 0});
 	remoteControl_Box = new THREE.Mesh(remoteControlGeometry, remoteControlMaterial);
 
 	remoteControl_Box.interact = function() {
