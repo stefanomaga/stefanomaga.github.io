@@ -37,6 +37,9 @@ function makeApartment() {
       //MUSIC
       scene.add(animateStereo());
 
+      //Remote Control
+      apartment.add(makeRemoteControl());
+
       apartment.rotation.x = Math.PI;
       apartment.position.set(25,-25,0);
       apartment.scale.set(3,3,3);

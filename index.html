@@ -117,7 +117,7 @@
     // once everything is loaded, we run our Three.js stuff.
     $(function () {
       var stats = initStats();
-            console.log("39");
+            console.log("40");
 
       // create a scene
       scene = new THREE.Scene();
@@ -286,6 +286,24 @@
           videoImageContext4.drawImage( video4, 0, 0 );
           if ( videoTexture4 ) 
             videoTexture4.needsUpdate = true;
+        }
+
+        if ( video5.readyState === video5.HAVE_ENOUGH_DATA ) {
+          videoImageContext5.drawImage( video5, 0, 0 );
+          if ( videoTexture5 ) 
+            videoTexture5.needsUpdate = true;
+        }
+
+        if ( video6.readyState === video6.HAVE_ENOUGH_DATA ) {
+          videoImageContext6.drawImage( video6, 0, 0 );
+          if ( videoTexture6 ) 
+            videoTexture6.needsUpdate = true;
+        }
+
+        if ( video7.readyState === video7.HAVE_ENOUGH_DATA ) {
+          videoImageContext7.drawImage( video7, 0, 0 );
+          if ( videoTexture7 ) 
+            videoTexture7.needsUpdate = true;
         }
         
         if(window.location.pointLock) {

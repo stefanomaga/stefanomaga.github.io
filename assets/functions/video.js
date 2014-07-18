@@ -61,7 +61,57 @@
 
 	videoTexture4 = new THREE.Texture( videoImage4 );
 		videoTexture4.minFilter = THREE.LinearFilter;
-		videoTexture4.magFilter = THREE.LinearFilter;			
+		videoTexture4.magFilter = THREE.LinearFilter;	
+
+	video5 = document.createElement( 'video' );
+		video5.src = "assets/movies/Aladdin.mp4";
+		video5.onPlay = false;
+
+	videoImage5 = document.createElement( 'canvas' );
+		videoImage5.width = 480;
+		videoImage5.height = 360;
+
+	videoImageContext5 = videoImage5.getContext( '2d' );
+		videoImageContext5.fillStyle = '#000000';
+		videoImageContext5.fillRect( 0, 0, videoImage5.width, videoImage5.height );
+
+	videoTexture5 = new THREE.Texture( videoImage5 );
+		videoTexture5.minFilter = THREE.LinearFilter;
+		videoTexture5.magFilter = THREE.LinearFilter;	
+
+	video6 = document.createElement( 'video' );
+		video6.src = "assets/movies/IlPianetaDelTesoro.mp4";
+		video6.onPlay = false;
+
+	videoImage6 = document.createElement( 'canvas' );
+		videoImage6.width = 480;
+		videoImage6.height = 360;
+
+	videoImageContext6 = videoImage6.getContext( '2d' );
+		videoImageContext6.fillStyle = '#000000';
+		videoImageContext6.fillRect( 0, 0, videoImage6.width, videoImage6.height );
+
+	videoTexture6 = new THREE.Texture( videoImage6 );
+		videoTexture6.minFilter = THREE.LinearFilter;
+		videoTexture6.magFilter = THREE.LinearFilter;	
+
+	video7 = document.createElement( 'video' );
+		video7.src = "assets/movies/Romeo.mp4";
+		video7.onPlay = false;
+
+	videoImage7 = document.createElement( 'canvas' );
+		videoImage7.width = 450;
+		videoImage7.height = 360;
+
+	videoImageContext7 = videoImage7.getContext( '2d' );
+		videoImageContext7.fillStyle = '#000000';
+		videoImageContext7.fillRect( 0, 0, videoImage7.width, videoImage7.height );
+
+	videoTexture7 = new THREE.Texture( videoImage7 );
+		videoTexture7.minFilter = THREE.LinearFilter;
+		videoTexture7.magFilter = THREE.LinearFilter;	
+
+
 
 function makeTv(x,y, video,videoTexture) {
 
@@ -85,6 +135,61 @@ function makeTv(x,y, video,videoTexture) {
 
 }
 
+function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, videoTexture3, video4, videoTexture4) {
+
+	var tvGeometry = new THREE.PlaneGeometry( x, y);
+	var tvMaterial = new THREE.MeshBasicMaterial( { map: videoTexture, overdraw: true } );	
+	var tv = new THREE.Mesh(tvGeometry,tvMaterial);
+	tv.video1 = video1;
+	tv.video2 = video2;
+	tv.video3 = video3;
+	tv.video4 = video4;
+
+	tv.video1.visible = true;
+	tv.video2.visible = false;
+	tv.video3.visible = false;
+	tv.video4.visible = false;
+	// tv.visible = false;
+
+	tv.interact = function() {
+		if (tv.video1.onPlay) {
+			tv.video1.pause();
+			tv.video1.onPlay = false;
+		}
+		if (tv.video2.onPlay) {
+			tv.video2.pause();
+			tv.video2.onPlay = false;
+		}
+		if (tv.video3.onPlay) {
+			tv.video3.pause();
+			tv.video3.onPlay = false;
+		}
+		if (tv.video4.onPlay) {
+			tv.video4.pause();
+			tv.video4.onPlay = false;
+		}
+		if ((!tv.video1.onPlay) && tv.video1.visible ){
+			tv.video1.play();
+			tv.video1.onPlay = true;
+		}
+		if ((!tv.video2.onPlay) && tv.video2.visible ){
+			tv.video2.play();
+			tv.video2.onPlay = true;
+		}
+		if ((!tv.video3.onPlay) && tv.video3.visible ){
+			tv.video3.play();
+			tv.video3.onPlay = true;
+		}
+		if ((!tv.video4.onPlay) && tv.video4.visible ){
+			tv.video4.play();
+			tv.video4.onPlay = true;
+		}
+	}	
+
+	return tv;
+
+}
+
 function makeTvs() {
 	var tvs = new THREE.Object3D();
 
@@ -94,7 +199,7 @@ function makeTvs() {
 	tv1.rotation.z = Math.PI;
 	tvs.add(tv1);
 
-	tv2 = makeTv(1,0.55,video1,videoTexture1);
+	tv2 = makeSpecialTv(1,0.55,video1,videoTexture1,video5,videoTexture5,video6,videoTexture6,video7,videoTexture7);
 	tv2.position.set(13, 9.2, 1.25);
 	tv2.rotation.x = -Math.PI/2;
 	tv2.rotation.z = Math.PI;
@@ -102,7 +207,8 @@ function makeTvs() {
 	tvs.add(tv2);
 
 	tv3 = makeTv(0.6,0.3,video3,videoTexture3);
-	tv3.position.set(6.11, 11.52, 1.138);
+	// tv3.position.set(6.11, 11.52, 1.138);
+	tv3.position.set(6.11, 11.4, 1.138);
 	tv3.rotation.x = -Math.PI/2;
 	tv3.rotation.z = Math.PI;
 	tv3.rotation.y = -Math.PI/2;
@@ -113,7 +219,69 @@ function makeTvs() {
 	imac.rotation.x = -Math.PI/2;
 	imac.rotation.z = Math.PI;
 	imac.rotation.y = -Math.PI/2;
-	tvs.add(imac);
+	// tvs.add(imac);
 
 	return tvs;
+}
+
+function makeRemoteControl(){
+
+	var remoteControlGeometry = new THREE.BoxGeometry(1,1,1);
+	var remoteControlMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 1});
+	remoteControl_Box = new THREE.Mesh(remoteControlGeometry, remoteControlMaterial);
+
+	remoteControl_Box.interact = function() {
+		if (video1.onPlay) {
+			video1.visible = false;
+			video5.visible = true;
+			video6.visible = false;
+			video7.visible = false;
+			video1.pause();
+			video1.onPlay = false;
+			video5.play();
+			video5.onPlay = true;
+		} 
+		if(video5.onPlay){
+			video1.visible = false;
+			video5.visible = false;
+			video6.visible = true;
+			video7.visible = false;
+			video5.pause();
+			video5.onPlay = false;
+			video6.play();
+			video6.onPlay = true;
+		}
+		if(video6.onPlay){
+			video1.visible = false;
+			video5.visible = false;
+			video6.visible = false;
+			video7.visible = true;
+			video6.pause();
+			video6.onPlay = false;
+			video7.play();
+			video7.onPlay = true;
+		}
+		if(video7.onPlay){
+			video1.visible = true;
+			video5.visible = false;
+			video6.visible = false;
+			video7.visible = false;
+			video7.pause();
+			video7.onPlay = false;
+		}
+		else {
+			video1.visible = true;
+			video5.visible = false;
+			video6.visible = false;
+			video7.visible = false;
+			video1.play();
+			video1.onPlay = true;
+		}	
+	}
+
+	remoteControl_Box.rotation.y = Math.PI/2;
+	remoteControl_Box.position.set(0,5,5);
+
+	return remoteControl_Box;
+ 
 }
