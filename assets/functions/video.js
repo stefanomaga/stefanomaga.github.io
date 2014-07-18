@@ -280,11 +280,11 @@ function makeRemoteControl(){
 		console.log("Remote Control Interact");
 		if (tv2.tva.video.onPlay) {
 			console.log("1->2");
-			tv2.tva.visible = false;
+			tv2.tva.video.visible = false;
 			tv2.tvb.visible = true;
 			tv2.tvc.visible = false;
 			tv2.tvd.visible = false;
-			
+
 			tv2.tva.video.onPlay = false;
 			tv2.tvb.video.onPlay = true;
 			
