@@ -337,6 +337,11 @@ function makeRemoteControl(){
 				tv2.tvb.video.onPlay = false;
 				tv2.tvc.video.onPlay = true;
 
+				console.log(tv2.tva.visible);
+				console.log(tv2.tvb.visible);
+				console.log(tv2.tvc.visible);
+				console.log(tv2.tvd.visible);
+
 				tv2.tvb.video.pause();
 				tv2.tvc.video.play();
 			}
@@ -351,6 +356,11 @@ function makeRemoteControl(){
 					tv2.tvc.video.onPlay = false;
 					tv2.tvd.video.onPlay = true;
 
+					console.log(tv2.tva.visible);
+					console.log(tv2.tvb.visible);
+					console.log(tv2.tvc.visible);
+					console.log(tv2.tvd.visible);
+
 					tv2.tvc.video.pause();
 					tv2.tvd.video.play();
 				}
@@ -363,6 +373,11 @@ function makeRemoteControl(){
 						tv2.tvd.visible = false;
 						
 						tv2.tvd.video.onPlay = false;
+
+						console.log(tv2.tva.visible);
+						console.log(tv2.tvb.visible);
+						console.log(tv2.tvc.visible);
+						console.log(tv2.tvd.visible);
 
 						tv2.tvd.video.pause();
 					}
