@@ -401,18 +401,70 @@ function makeRemoteControl(){
  
 }
 
-function updateAudioTV() {
+function makeSpeakers() {
+	var speakers = new THREE.Object3D();
+
+	var speakerGeometry = new THREE.BoxGeometry(0.5,0.5,1);
+	var speakerMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 1});
+	speaker1 = new THREE.Mesh(remoteControlGeometry, remoteControlMaterial);
+	speaker2 = new THREE.Mesh(remoteControlGeometry, remoteControlMaterial);
+	speaker1.position.set(13.5,9,0.2);
+	speaker2.position.set(12,9,0.2);
+
+	alfa = 1;
+
+	speaker1.onPlay = false;
+	speaker2.onPlay = false;
+
+	speakers.add(speaker1);
+	speakers.add(speaker2);	
+
+	speaker1.interact =  speaker2.interact = function() {
+		if(speaker1.onPlay || speaker2.onPlay){
+			speaker1.onPlay = false;
+			speaker2.onPlay = false;
+			alfa = 1;
+		if(!speaker1.onPlay || !speaker2.onPlay) {
+			speaker1.onPlay = true;
+			speaker2.onPlay = true;
+			alfa = 2;
+		}
+	}
+
+}
+
+function updateAudioTV2() {
 		var distance = tv2.position.distanceTo((!window.location.pointLock) ? camera.position : controlsFPS.getObject().position); 
 		if(distance <= 30) {
-			tv2.tva.video.volume = 1 * ( 1 - distance/30 );
-			tv2.tvb.video.volume = 1 * ( 1 - distance/30 );
-			tv2.tvc.video.volume = 1 * ( 1 - distance/30 );
-			tv2.tvd.video.volume = 1 * ( 1 - distance/30 );
+			tv2.tva.video.volume = alfa * ( 1 - distance/30 );
+			tv2.tvb.video.volume = alfa * ( 1 - distance/30 );
+			tv2.tvc.video.volume = alfa * ( 1 - distance/30 );
+			tv2.tvd.video.volume = alfa * ( 1 - distance/30 );
 		}
 		else {
 			tv2.tva.video.volume = 0;
 			tv2.tvb.video.volume = 0;
 			tv2.tvc.video.volume = 0;
 			tv2.tvd.video.volume = 0;
+	}
+}
+
+function updateAudioTV1() {
+		var distance = tv1.position.distanceTo((!window.location.pointLock) ? camera.position : controlsFPS.getObject().position); 
+		if(distance <= 30) {
+			tv1.video.volume = 1 * ( 1 - distance/30 );
+		}
+		else {
+			tv1.video.volume = 0;
+	}
+}
+
+function updateAudioTV3() {
+		var distance = tv3.position.distanceTo((!window.location.pointLock) ? camera.position : controlsFPS.getObject().position); 
+		if(distance <= 30) {
+			tv3.video.volume = 1 * ( 1 - distance/30 );
+		}
+		else {
+			tv3.video.volume = 0;
 	}
 }
