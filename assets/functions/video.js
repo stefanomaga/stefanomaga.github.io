@@ -47,22 +47,6 @@
 		videoTexture3.minFilter = THREE.LinearFilter;
 		videoTexture3.magFilter = THREE.LinearFilter;
 
-	video4 = document.createElement( 'video' );
-		video4.src = "assets/movies/Apple.mp4";
-		video4.onPlay = false;
-
-	videoImage4 = document.createElement( 'canvas' );
-		videoImage4.width = 640;
-		videoImage4.height = 360;
-
-	videoImageContext4 = videoImage4.getContext( '2d' );
-		videoImageContext4.fillStyle = '#000000';
-		videoImageContext4.fillRect( 0, 0, videoImage4.width, videoImage4.height );
-
-	videoTexture4 = new THREE.Texture( videoImage4 );
-		videoTexture4.minFilter = THREE.LinearFilter;
-		videoTexture4.magFilter = THREE.LinearFilter;	
-
 	video5 = document.createElement( 'video' );
 		video5.src = "assets/movies/Aladin.mp4";
 		video5.onPlay = false;
@@ -290,13 +274,6 @@ function makeTvs() {
 	tv3.rotation.y = -Math.PI/2;
 	tvs.add(tv3);
 
-	imac = makeTv(0.2,0.18,video4,videoTexture4);
-	imac.position.set(6.2, 13.65, 0.9);
-	imac.rotation.x = -Math.PI/2;
-	imac.rotation.z = Math.PI;
-	imac.rotation.y = -Math.PI/2;
-	// tvs.add(imac);
-
 	return tvs;
 }
 
@@ -419,6 +396,8 @@ function makeRemoteControl(){
 
 	remoteControl_Box.rotation.y = Math.PI/2;
 	remoteControl_Box.position.set(6,3,0.5);
+	var helper = new THREE.AxisHelper(100);
+	remoteControl_Box.add(helper);
 
 	return remoteControl_Box;
  
