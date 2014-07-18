@@ -424,12 +424,15 @@ function makeSpeakers() {
 			speaker1.onPlay = false;
 			speaker2.onPlay = false;
 			alfa = 1;
+		}
 		if(!speaker1.onPlay || !speaker2.onPlay) {
 			speaker1.onPlay = true;
 			speaker2.onPlay = true;
 			alfa = 2;
 		}
 	}
+
+	return speakers;
 
 }
 
@@ -446,7 +449,7 @@ function updateAudioTV2() {
 			tv2.tvb.video.volume = 0;
 			tv2.tvc.video.volume = 0;
 			tv2.tvd.video.volume = 0;
-	}
+		}
 }
 
 function updateAudioTV1() {
@@ -456,7 +459,7 @@ function updateAudioTV1() {
 		}
 		else {
 			tv1.video.volume = 0;
-	}
+		}
 }
 
 function updateAudioTV3() {
@@ -466,5 +469,5 @@ function updateAudioTV3() {
 		}
 		else {
 			tv3.video.volume = 0;
-	}
+		}
 }

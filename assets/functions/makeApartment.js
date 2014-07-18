@@ -33,6 +33,7 @@ function makeApartment() {
 
       //MOVIES
       apartment.add(makeTvs());
+      apartment.add(makeSpeakers());
 
       //MUSIC
       scene.add(animateStereo());
