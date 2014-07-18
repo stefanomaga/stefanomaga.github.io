@@ -285,10 +285,11 @@ function makeRemoteControl(){
 			tv2.tvc.visible = false;
 			tv2.tvd.visible = false;
 			
-			tv2.tva.video.pause();
 			tv2.tva.video.onPlay = false;
-			tv2.tvb.video.play();
 			tv2.tvb.video.onPlay = true;
+			
+			tv2.tva.video.pause();
+			tv2.tvb.video.play();
 		} 
 		if(tv2.tvb.video.onPlay){
 			tv2.tva.visible = false;
