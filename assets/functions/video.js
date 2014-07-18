@@ -395,7 +395,7 @@ function makeRemoteControl(){
 	}
 
 	remoteControl_Box.rotation.y = Math.PI/2;
-	remoteControl_Box.position.set(6,3,0.5);
+	remoteControl_Box.position.set(10,10,0.5);
 	var helper = new THREE.AxisHelper(100);
 	remoteControl_Box.add(helper);
 
