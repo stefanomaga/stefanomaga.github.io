@@ -199,26 +199,30 @@ function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, 
 			tv2.tvd.video.pause();
 			tv2.tvd.video.onPlay = false;
 		}
-		if ((!tv2.tva.video.onPlay) && tv2.tva.video.visible ){
+		if ((!tv2.tva.video.onPlay) && tv2.tva.visible ){
 			console.log("PLAY 1");
 			tv2.tva.video.play();
 			tv2.tva.video.onPlay = true;
 		}
-		if ((!tv2.tvb.video.onPlay) && tv2.tvb.video.visible ){
+		if ((!tv2.tvb.video.onPlay) && tv2.tvb.visible ){
 			console.log("PLAY 2");
 			tv2.tvb.video.play();
 			tv2.tvb.video.onPlay = true;
 		}
-		if ((!tv2.tvc.video.onPlay) && tv2.tvc.video.visible ){
+		if ((!tv2.tvc.video.onPlay) && tv2.tvc.visible ){
 			console.log("PLAY 3");
 			tv2.tvc.video.play();
 			tv2.tvc.video.onPlay = true;
 		}
-		if ((!tvd.video.onPlay) && tvd.video.visible ){
+		if ((!tvd.video.onPlay) && tvd.visible ){
 			console.log("PLAY 4");
 			tvd.video.play();
 			tvd.video.onPlay = true;
 		}
+			console.log(tv2.tva.visible);
+			console.log(tv2.tvb.visible);
+			console.log(tv2.tvc.visible);
+			console.log(tv2.tvd.visible);
 	}	
 
 	return tv;
