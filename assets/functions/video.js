@@ -169,38 +169,41 @@ function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, 
 	tv.tv3 = tv3;
 	tv.tv4 = tv4;
 
-	tv.interact = function() {
-		if (tv.tv1.video.onPlay) {
-			tv.tv1.video.pause();
-			tv.tv1.video.onPlay = false;
+	tv1.interact = tv2.interact = tv3.interact = tv4.interact = function() {
+		console.log("Interact");
+
+		if (this.parent.tv1.video.onPlay) {
+			this.parent.tv1.video.pause();
+			this.parent.tv1.video.onPlay = false;
 		}
-		if (tv.tv2.video.onPlay) {
-			tv.tv2.video.pause();
-			tv.tv2.video.onPlay = false;
+		if (this.parent.tv2.video.onPlay) {
+			this.parent.tv2.video.pause();
+			this.parent.tv2.video.onPlay = false;
 		}
-		if (tv.tv3.video.onPlay) {
-			tv.tv3.video.pause();
-			tv.tv3.video.onPlay = false;
+		if (this.parent.tv3.video.onPlay) {
+			this.parent.tv3.video.pause();
+			this.parent.tv3.video.onPlay = false;
 		}
-		if (tv.tv4.video.onPlay) {
-			tv.tv4.video.pause();
-			tv.tv4.video.onPlay = false;
+		if (this.parent.tv4.video.onPlay) {
+			this.parent.tv4.video.pause();
+			this.parent.tv4.video.onPlay = false;
 		}
-		if ((!tv.tv1.video.onPlay) && tv.tv1.video.visible ){
-			tv.tv1.video.play();
-			tv.tv1.video.onPlay = true;
+		if ((!this.parent.tv1.video.onPlay) && this.parent.tv1.video.visible ){
+			this.parent.tv1.video.play();
+			this.parent.tv1.video.onPlay = true;
+			console.log("Play Video1");
 		}
-		if ((!tv.tv2.video.onPlay) && tv.tv2.video.visible ){
-			tv.tv2.video.play();
-			tv.tv2.video.onPlay = true;
+		if ((!this.parent.tv2.video.onPlay) && this.parent.tv2.video.visible ){
+			this.parent.tv2.video.play();
+			this.parent.tv2.video.onPlay = true;
 		}
-		if ((!tv.tv3.video.onPlay) && tv.tv3.video.visible ){
-			tv.tv3.video.play();
-			tv.tv3.video.onPlay = true;
+		if ((!this.parent.tv3.video.onPlay) && this.parent.tv3.video.visible ){
+			this.parent.tv3.video.play();
+			this.parent.tv3.video.onPlay = true;
 		}
-		if ((!tv.tv4.video.onPlay) && tv.tv4.video.visible ){
-			tv.tv4.video.play();
-			tv.tv4.video.onPlay = true;
+		if ((!this.parent.tv4.video.onPlay) && this.parent.tv4.video.visible ){
+			this.parent.tv4.video.play();
+			this.parent.tv4.video.onPlay = true;
 		}
 	}	
 
