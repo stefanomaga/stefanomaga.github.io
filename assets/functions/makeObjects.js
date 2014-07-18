@@ -21,7 +21,7 @@ function makeObjects() {
 	tizio.position.set(0,0,0);
 	var helper = new THREE.AxisHelper(100);
 	tizio.add(helper);
-	Object3D.add(tizio);
+	objects3D.add(tizio);
 
 	// //BEDROOM1
 	// objLoader('office_chair', 0.6, 5.5,13.5,0.2, Math.PI/2,Math.PI/2,0);
