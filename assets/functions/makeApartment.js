@@ -2,17 +2,17 @@ apartment = new THREE.Object3D();
 
 
 function makeApartment() {
-	//Lights
-      apartment.add(makeLights());
+	// //Lights
+ //      apartment.add(makeLights());
 
-      //Switches
-      apartment.add(makeSwitches());
+ //      //Switches
+ //      apartment.add(makeSwitches());
 
-	//make Doors
-      apartment.add(makeDoors());
+	// //make Doors
+ //      apartment.add(makeDoors());
 
-      //make Windows
-      apartment.add(makeWindows());
+ //      //make Windows
+ //      apartment.add(makeWindows());
 
       //Make Rooms
       apartment.add(makeRooms());
