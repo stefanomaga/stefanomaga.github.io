@@ -169,7 +169,7 @@ function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, 
 	tv.tvc.visible = false;
 	tv.tvd.visible = false;
 
-	tv2A.interact  = function() {
+	tva.interact  = function() {
 		console.log("Interact");
 
 		if (this.parent.tva.video.onPlay) {
@@ -221,6 +221,7 @@ function makeTvs() {
 	tvs.add(tv1);
 
 	tv2 = makeSpecialTv(1,0.55,video1,videoTexture1,video5,videoTexture5,video6,videoTexture6,video7,videoTexture7);
+	
 	tv2A = tv2.tva;
 	tv2B = tv2.tvb;
 	tv2C = tv2.tvc;
