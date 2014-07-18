@@ -330,6 +330,7 @@ function makeRemoteControl(){
 			tv2.tvb.video.play();
 		} 
 		if(tv2.tvb.video.onPlay){
+			console.log("2->3");
 			tv2.tva.visible = false;
 			tv2.tvb.visible = false;
 			tv2.tvc.visible = true;
@@ -341,6 +342,7 @@ function makeRemoteControl(){
 			tv2.tvc.video.onPlay = true;
 		}
 		if(tv2.tvc.video.onPlay){
+			console.log("3->4");
 			tv2.tva.visible = false;
 			tv2.tvb.visible = false;
 			tv2.tvc.visible = true;
@@ -352,6 +354,7 @@ function makeRemoteControl(){
 			tv2.tvd.video.onPlay = true;
 		}
 		if(tv2.tvd.video.onPlay){
+			console.log("4->X");
 			tv2.tva.visible = true;
 			tv2.tvb.visible = false;
 			tv2.tvc.visible = false;
@@ -361,6 +364,7 @@ function makeRemoteControl(){
 			tv2.tvd.video.onPlay = false;
 		}
 		else {
+			console.log("ON da telecoando");
 			tv2.tva.visible = true;
 			tv2.tvb.visible = false;
 			tv2.tvc.visible = false;
