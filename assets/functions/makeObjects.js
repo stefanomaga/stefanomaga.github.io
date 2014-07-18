@@ -13,12 +13,12 @@ function makeObjects() {
 	objLoader('interrupteur', 0.01, 9.2,9.48,1.2, Math.PI/2,0,0);
 	objLoader('interrupteur', 0.01, 9.3,9.48,1.2, Math.PI/2,0,0);
 	objLoader('remote', 0.05, 12,7.5,0.5, Math.PI/2,Math.PI/2,0);
-	objLoader('speaker2', 0.05, 12,7.5,0.5, Math.PI/2,Math.PI/2,0);
+	objLoader('speaker3', 0.05, 12,7.5,0.5, Math.PI/2,Math.PI/2,0);
 
 	var tizioGeometry = new THREE.BoxGeometry(0.1,0.3,0.1);
 	var tizioMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 0});
 	tizio = new THREE.Mesh(tizioGeometry, tizioMaterial);
-	tizio.position.set(15,10,0);
+	tizio.position.set(13,8,0);
 	var helper = new THREE.AxisHelper(100);
 	tizio.add(helper);
 	objects3D.add(tizio);
