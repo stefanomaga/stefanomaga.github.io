@@ -324,9 +324,6 @@ function makeRemoteControl(){
 			console.log(tv2.tvd.visible);
 
 			tv2.tva.video.pause();
-
-			console.log("Va avanti?");
-
 			tv2.tvb.video.play();
 		} 
 		else {
@@ -337,10 +334,11 @@ function makeRemoteControl(){
 				tv2.tvc.visible = true;
 				tv2.tvd.visible = false;
 				
-				tv2.tvb.video.pause();
 				tv2.tvb.video.onPlay = false;
-				tv2.tvc.video.play();
 				tv2.tvc.video.onPlay = true;
+
+				tv2.tvb.video.pause();
+				tv2.tvc.video.play();
 			}
 			else {
 				if(tv2.tvc.video.onPlay){
@@ -350,10 +348,11 @@ function makeRemoteControl(){
 					tv2.tvc.visible = true;
 					tv2.tvd.visible = false;
 					
-					tv2.tvc.video.pause();
 					tv2.tvc.video.onPlay = false;
-					tv2.tvd.video.play();
 					tv2.tvd.video.onPlay = true;
+
+					tv2.tvc.video.pause();
+					tv2.tvd.video.play();
 				}
 				else {
 					if(tv2.tvd.video.onPlay){
@@ -363,8 +362,9 @@ function makeRemoteControl(){
 						tv2.tvc.visible = false;
 						tv2.tvd.visible = false;
 						
-						tv2.tvd.video.pause();
 						tv2.tvd.video.onPlay = false;
+
+						tv2.tvd.video.pause();
 					}
 					else {
 						console.log("ON da telecoando");
@@ -373,8 +373,9 @@ function makeRemoteControl(){
 						tv2.tvc.visible = false;
 						tv2.tvd.visible = false;
 						
-						tv2.tva.video.play();
 						tv2.tva.video.onPlay = true;
+
+						tv2.tva.video.play();
 					}
 				}
 			}
