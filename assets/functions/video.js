@@ -406,8 +406,8 @@ function makeSpeakers() {
 
 	var speakerGeometry = new THREE.BoxGeometry(0.5,0.5,1);
 	var speakerMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 1});
-	speaker1 = new THREE.Mesh(remoteControlGeometry, remoteControlMaterial);
-	speaker2 = new THREE.Mesh(remoteControlGeometry, remoteControlMaterial);
+	speaker1 = new THREE.Mesh(speakerGeometry, speakerMaterial);
+	speaker2 = new THREE.Mesh(speakerGeometry, speakerMaterial);
 	speaker1.position.set(13.5,9,0.2);
 	speaker2.position.set(12,9,0.2);
 
