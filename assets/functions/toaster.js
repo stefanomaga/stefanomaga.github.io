@@ -18,7 +18,7 @@ function makeToaster() {
 
 	}
 
-	return toaster;
+	return toaster3D;
 }
 
 function makeToasts() {
