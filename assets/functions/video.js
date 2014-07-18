@@ -279,6 +279,7 @@ function makeRemoteControl(){
 	remoteControl_Box.interact = function() {
 		console.log("Remote Control Interact");
 		if (tv2.tva.video.onPlay) {
+			console.log("1->2");
 			tv2.tva.visible = false;
 			tv2.tvb.visible = true;
 			tv2.tvc.visible = false;
