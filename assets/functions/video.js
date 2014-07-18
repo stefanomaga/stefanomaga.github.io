@@ -424,7 +424,7 @@ function makeSpeakers() {
 			console.log("Speakers OFF");
 			speaker1.onPlay = false;
 			speaker2.onPlay = false;
-			alfa = 0.5;
+			alfa = 0.2;
 		}
 		else {
 			if(!speaker1.onPlay || !speaker2.onPlay) {
