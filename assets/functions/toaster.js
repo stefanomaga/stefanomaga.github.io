@@ -5,7 +5,7 @@ function makeToaster() {
 	toaster.position.set(6,6.75,1);
 
 	toaster.interact = function() {
-
+		
 	}
 
 	return toaster;
