@@ -154,20 +154,20 @@ function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, 
 	var tv4Material = new THREE.MeshBasicMaterial( { map: videoTexture4, overdraw: true } );	
 	var tv4 = new THREE.Mesh(tv4Geometry,tv4Material);
 
-	tv1.video = video1;
-	tv2.video = video2;
-	tv3.video = video3;
-	tv4.video = video4;
-
-	tv1.video.visible = true;
-	tv2.video.visible = false;
-	tv3.video.visible = false;
-	tv4.video.visible = false;
-
 	tv.tv1 = tv1;
 	tv.tv2 = tv2;
 	tv.tv3 = tv3;
 	tv.tv4 = tv4;
+
+	tv.tv1.video = video1;
+	tv.tv2.video = video2;
+	tv.tv3.video = video3;
+	tv.tv4.video = video4;
+
+	tv.tv1.visible = true;
+	tv.tv2.visible = false;
+	tv.tv3.visible = false;
+	tv.tv4.visible = false;
 
 	tv1.interact = tv2.interact = tv3.interact = tv4.interact = function() {
 		console.log("Interact");
@@ -252,51 +252,57 @@ function makeRemoteControl(){
 	remoteControl_Box = new THREE.Mesh(remoteControlGeometry, remoteControlMaterial);
 
 	remoteControl_Box.interact = function() {
-		if (video1.onPlay) {
-			video1.visible = false;
-			video5.visible = true;
-			video6.visible = false;
-			video7.visible = false;
-			video1.pause();
-			video1.onPlay = false;
-			video5.play();
-			video5.onPlay = true;
+		console.log("Remote Control Interact");
+		if (tv2.tv1.video.onPlay) {
+			tv2.tv1.visible = false;
+			tv2.tv2.visible = true;
+			tv2.tv3.visible = false;
+			tv2.tv4.visible = false;
+			
+			tv2.tv1.video.pause();
+			tv2.tv1.video.onPlay = false;
+			tv2.tv2.video.play();
+			tv2.tv2.video.onPlay = true;
 		} 
-		if(video5.onPlay){
-			video1.visible = false;
-			video5.visible = false;
-			video6.visible = true;
-			video7.visible = false;
-			video5.pause();
-			video5.onPlay = false;
-			video6.play();
-			video6.onPlay = true;
+		if(tv2.tv2.video.onPlay){
+			tv2.tv1.visible = false;
+			tv2.tv2.visible = false;
+			tv2.tv3.visible = true;
+			tv2.tv4.visible = false;
+			
+			tv2.tv2.video.pause();
+			tv2.tv2.video.onPlay = false;
+			tv2.tv3.video.play();
+			tv2.tv3.video.onPlay = true;
 		}
-		if(video6.onPlay){
-			video1.visible = false;
-			video5.visible = false;
-			video6.visible = false;
-			video7.visible = true;
-			video6.pause();
-			video6.onPlay = false;
-			video7.play();
-			video7.onPlay = true;
+		if(tv2.tv3.video.onPlay){
+			tv2.tv1.visible = false;
+			tv2.tv2.visible = false;
+			tv2.tv3.visible = true;
+			tv2.tv4.visible = false;
+			
+			tv2.tv3.video.pause();
+			tv2.tv3.video.onPlay = false;
+			tv2.tv4.video.play();
+			tv2.tv4.video.onPlay = true;
 		}
-		if(video7.onPlay){
-			video1.visible = true;
-			video5.visible = false;
-			video6.visible = false;
-			video7.visible = false;
-			video7.pause();
-			video7.onPlay = false;
+		if(tv2.tv4.video.onPlay){
+			tv2.tv1.visible = true;
+			tv2.tv2.visible = false;
+			tv2.tv3.visible = false;
+			tv2.tv4.visible = false;
+			
+			tv2.tv4.video.pause();
+			tv2.tv4.video.onPlay = false;
 		}
 		else {
-			video1.visible = true;
-			video5.visible = false;
-			video6.visible = false;
-			video7.visible = false;
-			video1.play();
-			video1.onPlay = true;
+			tv2.tv1.visible = true;
+			tv2.tv2.visible = false;
+			tv2.tv3.visible = false;
+			tv2.tv4.visible = false;
+			
+			tv2.tv1.video.play();
+			tv2.tv1.video.onPlay = true;
 		}	
 	}
 

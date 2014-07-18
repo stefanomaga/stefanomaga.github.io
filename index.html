@@ -117,7 +117,7 @@
     // once everything is loaded, we run our Three.js stuff.
     $(function () {
       var stats = initStats();
-            console.log("42");
+            console.log("43");
 
       // create a scene
       scene = new THREE.Scene();
@@ -337,7 +337,7 @@
           // scene.add(arrowHelper);
         } 
 
-        var intersects = raycaster.intersectObjects([door1.door,door2.door,door3.door,door4.door,door5.door,window1.glass, window2.glass1, window2.glass2, window3.glass1, window3.glass2, window4.glass1, window4.glass2, window5.glass, stereo_Box, switch1,switch2,switch3,switch4,switch5,switch6,switch7,tv1,tv2.tv1,tv2.tv2,tv2.tv3,tv2.tv4,tv3,imac]);
+        var intersects = raycaster.intersectObjects([door1.door,door2.door,door3.door,door4.door,door5.door,window1.glass, window2.glass1, window2.glass2, window3.glass1, window3.glass2, window4.glass1, window4.glass2, window5.glass, stereo_Box, switch1,switch2,switch3,switch4,switch5,switch6,switch7,tv1,tv2.tv1,tv2.tv2,tv2.tv3,tv2.tv4,tv3,imac]); 
 
         if (intersects.length > 0) {
             intersects[0].object.interact();
