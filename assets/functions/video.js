@@ -176,7 +176,7 @@ function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, 
 
 	tva.interact = tvb.interact = tvc.interact = tvd.interact = function() {
 		console.log("Interact");
-
+		console.log(this.parent);
 		if (this.parent.tva.video.onPlay) {
 			this.parent.tva.video.pause();
 			this.parent.tva.video.onPlay = false;
