@@ -1,11 +1,19 @@
 function makeToaster() {
+	var toaster3D = new THREE.Object3D();
+
 	makeToasts();
 
+	toaster3D.add(toast1);
+	toaster3D.add(toast2);
+	
 	var toasterGeometry = new THREE.BoxGeometry(0.5,0.5,0.5);
 	var toasterMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 1});
 	toaster = new THREE.Mesh(toasterGeometry, toasterGeometry);
 	toaster.position.set(6,6.75,1);
 
+
+	toaster3D.add(toaster);
+	
 	toaster.interact = function() {
 
 	}
