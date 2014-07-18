@@ -1,4 +1,4 @@
-function make toaster() {
+function makeToaster() {
 	makeToasts();
 
 	var toasterGeometry = new THREE.BoxGeometry(0.5,0.5,0.5);
