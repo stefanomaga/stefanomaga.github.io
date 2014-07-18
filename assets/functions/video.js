@@ -179,38 +179,38 @@ function makeSpecialTv(x,y, video1,videoTexture1,video2, videoTexture2, video3, 
 		console.log(this.parent);
 		console.log(this.parent.tva);
 		console.log(this.parent.tva.video);
-		if (this.parent.tva.video.onPlay) {
-			this.parent.tva.video.pause();
-			this.parent.tva.video.onPlay = false;
+		if (tva.video.onPlay) {
+			tva.video.pause();
+			tva.video.onPlay = false;
 		}
-		if (this.parent.tvb.video.onPlay) {
-			this.parent.tvb.video.pause();
-			this.parent.tvb.video.onPlay = false;
+		if (tvb.video.onPlay) {
+			tvb.video.pause();
+			tvb.video.onPlay = false;
 		}
-		if (this.parent.tvc.video.onPlay) {
-			this.parent.tvc.video.pause();
-			this.parent.tvc.video.onPlay = false;
+		if (tvc.video.onPlay) {
+			tvc.video.pause();
+			tvc.video.onPlay = false;
 		}
-		if (this.parent.tvd.video.onPlay) {
-			this.parent.tvd.video.pause();
-			this.parent.tvd.video.onPlay = false;
+		if (tvd.video.onPlay) {
+			tvd.video.pause();
+			tvd.video.onPlay = false;
 		}
-		if ((!this.parent.tva.video.onPlay) && this.parent.tva.video.visible ){
-			this.parent.tva.video.play();
-			this.parent.tva.video.onPlay = true;
+		if ((!tva.video.onPlay) && tva.video.visible ){
+			tva.video.play();
+			tva.video.onPlay = true;
 			console.log("Play Video1");
 		}
-		if ((!this.parent.tvb.video.onPlay) && this.parent.tvb.video.visible ){
-			this.parent.tvb.video.play();
-			this.parent.tvb.video.onPlay = true;
+		if ((!tvb.video.onPlay) && tvb.video.visible ){
+			tvb.video.play();
+			tvb.video.onPlay = true;
 		}
-		if ((!this.parent.tvc.video.onPlay) && this.parent.tvc.video.visible ){
-			this.parent.tvc.video.play();
-			this.parent.tvc.video.onPlay = true;
+		if ((!tvc.video.onPlay) && tvc.video.visible ){
+			tvc.video.play();
+			tvc.video.onPlay = true;
 		}
-		if ((!this.parent.tvd.video.onPlay) && this.parent.tvd.video.visible ){
-			this.parent.tvd.video.play();
-			this.parent.tvd.video.onPlay = true;
+		if ((!tvd.video.onPlay) && tvd.video.visible ){
+			tvd.video.play();
+			tvd.video.onPlay = true;
 		}
 	}	
 
