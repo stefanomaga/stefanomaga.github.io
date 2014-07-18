@@ -64,8 +64,8 @@ function makeObjects() {
 	objLoader('hangingLight', 0.01, 4.5,8,2.7, Math.PI/2,-Math.PI/2,0);
 	objLoader('interrupteur', 0.01, 6.48,8.2,1.2, -Math.PI/2,-Math.PI/2,0);
 	objLoader('grillePain', 0.01, 6,6.75,1, -Math.PI/2,0,0);
-	objLoader('toast', 0.01, 6.2,6.75,1.5, -Math.PI/2,0,Math.PI/2);
-	objLoader('toast', 0.01, 5.8,6.75,1.5, -Math.PI/2,0,Math.PI/2);
+	objLoader('toast', 0.01, 6.15,6.75,1.5, -Math.PI/2,0,Math.PI/2);
+	objLoader('toast', 0.01, 5.85,6.75,1.5, -Math.PI/2,0,Math.PI/2);
 
 	// //BATHROOM1
 	// objLoader('hangingLight', 0.01, 4.5,5,2.7, Math.PI/2,-Math.PI/2,0);
