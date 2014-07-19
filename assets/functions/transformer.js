@@ -3,7 +3,7 @@ car.position.set(5,17,0);
 
 	var helper = new THREE.AxisHelper(100);
 	car.add(helper);
-	
+
 apartment.add(car);
 
 function moveCar(){
@@ -42,7 +42,7 @@ function moveCar(){
             .delay(1200) 
             .start();   
 
-    car.position.set(car.position.x + 15, car.position.y - 20 , car.position.z);
+    car.position.set(car.position.x, car.position.y - 20 , car.position.z);
 
 	var movement3 = new TWEEN.Tween(car.position)
             .to({ x: car.position.x - 15, y: car.position.y, z: car.position.z}, 500)
