@@ -94,7 +94,7 @@ function makeObjects() {
 	// objLoader('ficus', 0.03, 16.7,1.8,0.1, Math.PI/2,-Math.PI/2,0);
 	// objLoader('maceta', 1, 16.4,5,0.1, Math.PI/2,-Math.PI/2,0);
 
-	// objLoader('RB-BumbleBee', 0.01, 15,13,0, -Math.PI,Math.PI,-Math.PI/2);
+	objLoader('RB-BumbleBee', 0.01, 0,0,0, -Math.PI,Math.PI,-Math.PI/2);
 	objLoaderAnimated('VH-BumbleBee', 0.006, 0,0,0, -Math.PI,-Math.PI,-Math.PI,car);
 
 
