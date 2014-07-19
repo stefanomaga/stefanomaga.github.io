@@ -94,8 +94,8 @@ function makeObjects() {
 	// objLoader('ficus', 0.03, 16.7,1.8,0.1, Math.PI/2,-Math.PI/2,0);
 	// objLoader('maceta', 1, 16.4,5,0.1, Math.PI/2,-Math.PI/2,0);
 
-	// objLoader('RB-BumbleBee', 0.01, 15,13,0, -Math.PI,Math.PI,-Math.PI/2);
-	// objLoader('VH-BumbleBee', 0.006, 5,17,0, -Math.PI,-Math.PI,-Math.PI);
+	objLoader('RB-BumbleBee', 0.01, 15,13,0, -Math.PI,Math.PI,-Math.PI/2);
+	objLoader('VH-BumbleBee', 0.006, 5,17,0, -Math.PI,-Math.PI,-Math.PI);
 
 
 	return objects3D;
