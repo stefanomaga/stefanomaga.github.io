@@ -91,8 +91,14 @@ function moveCar(){
 
 }
 
+function transormation(){
+	var movement1 = new TWEEN.Tween(car.position)
+            .to({ x: 15, y: 13 , z: 0}, 500)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out)  
+            .start();	
+}
+
 function resetCar(){
 	console.log("RESET CAR");
-	car.position.set(5,17,0);
-	car.rotation.set(-rotationCar);
 }
