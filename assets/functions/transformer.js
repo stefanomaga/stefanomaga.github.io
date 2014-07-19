@@ -19,6 +19,15 @@ function moveCar(){
             .start();            
 
     rotationCar = -Math.PI/2;
+
+    var rotation1 = new TWEEN.Tween(car.rotation)
+            .to({ z: -Math.PI/2}, 500)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(1000) 
+            .start();            
+
+    rotationCar = -Math.PI;
 }
 
 function resetCar(){
