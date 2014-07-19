@@ -19,6 +19,8 @@ function moveCar(){
             .delay(500) 
             .start(); 
 
+    car.position.set(car.position.x + 15, car.position.y, car.position.z);
+
 	var movement2 = new TWEEN.Tween(car.position)
             .to({ x: car.position.x + 15, y: car.position.y, z: car.position.z}, 500)
             .easing(TWEEN.Easing.Linear.None)
