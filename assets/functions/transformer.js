@@ -9,7 +9,7 @@ function moveCar(){
             //.easing(TWEEN.Easing.Bounce.Out)  
             .start();
 
-    car.position.set(car.position.x + 20, car.position.y, car.position.z);        
+    // car.position.set(car.position.x + 20, car.position.y, car.position.z);        
 
 	var rotation1 = new TWEEN.Tween(car.rotation)
             .to({ z: -Math.PI/2}, 500)
@@ -28,6 +28,8 @@ function moveCar(){
     //         .start();            
 
     // rotationCar = -Math.PI;
+
+     
 }
 
 function resetCar(){
