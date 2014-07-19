@@ -1,8 +1,8 @@
 function makeObjects() {
 	objects3D = new THREE.Object3D();
 
-	toast1 = new new THREE.Object3D();
-	toast2 = new new THREE.Object3D();
+	toast1 = new THREE.Object3D();
+	toast2 = new THREE.Object3D();
 	toast1.position.set(6.15,6.75,1.5);	
 	toast2.position.set(5.9,6.75,1.5);	
 	objects3D.add(toast1);
