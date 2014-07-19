@@ -13,11 +13,18 @@ function moveCar(){
     rotationCar = -Math.PI/2;
 
 	var rotation1 = new TWEEN.Tween(car.rotation)
-            .to({ z: rotationCar}, 500)
+            .to({ z: rotationCar}, 200)
             .easing(TWEEN.Easing.Linear.None)
             //.easing(TWEEN.Easing.Bounce.Out) 
             .delay(500) 
-            .start();            
+            .start(); 
+
+	var movement2 = new TWEEN.Tween(car.position)
+            .to({ x: car.position.x + 15, y: car.position.y + 15, z: car.position.z}, 500)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out)  
+            .delay(750) 
+            .start();
 
     // var rotation1 = new TWEEN.Tween(car.rotation)
     //         .to({ z: -Math.PI/2}, 500)
