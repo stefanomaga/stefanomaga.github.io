@@ -1,20 +1,20 @@
 function makeObjects() {
 	objects3D = new THREE.Object3D();
 
-	// //LIVING ROOM
-	// objLoader('L_shaped_sofa', 0.012, 13,7.3,0, Math.PI/2,-Math.PI,0);
-	// objLoader('contemp_living_room', 0.012, 13,9.5,0.2, Math.PI/2,0,0);
-	// objLoader('mini_stereo', 0.012, 14.5,9.25,1.6, Math.PI/2,0,0);
-	// objLoader('roundTable2', 0.01, 19,4.5,1.4, Math.PI/2,0,0);
-	// objLoader('chairWithCushion', 0.01, 12.8,5.6,0.2, Math.PI/2,Math.PI/2,0);
-	// objLoader('chairWithCushion', 0.01, 15.5,5.6,0.2, Math.PI/2,-Math.PI/2,0);
-	// objLoader('hangingLight', 0.01, 10,8,2.7, Math.PI/2,-Math.PI/2,0);
-	// objLoader('track-lights', 0.1, 13,7,2.7, Math.PI/2,-Math.PI/2,0);
-	// objLoader('interrupteur', 0.01, 9.2,9.48,1.2, Math.PI/2,0,0);
-	// objLoader('interrupteur', 0.01, 9.3,9.48,1.2, Math.PI/2,0,0);
-	// objLoader('remote', 0.05, 12,7.5,0.5, Math.PI/2,Math.PI/2,0);
-	// objLoader('speaker3', 0.01, 13.5,9,0.2, Math.PI/2,0,0);
-	// objLoader('speaker3', 0.01, 12,9,0.2, Math.PI/2,0,0);
+	//LIVING ROOM
+	objLoader('L_shaped_sofa', 0.012, 13,7.3,0, Math.PI/2,-Math.PI,0);
+	objLoader('contemp_living_room', 0.012, 13,9.5,0.2, Math.PI/2,0,0);
+	objLoader('mini_stereo', 0.012, 14.5,9.25,1.6, Math.PI/2,0,0);
+	objLoader('roundTable2', 0.01, 19,4.5,1.4, Math.PI/2,0,0);
+	objLoader('chairWithCushion', 0.01, 12.8,5.6,0.2, Math.PI/2,Math.PI/2,0);
+	objLoader('chairWithCushion', 0.01, 15.5,5.6,0.2, Math.PI/2,-Math.PI/2,0);
+	objLoader('hangingLight', 0.01, 10,8,2.7, Math.PI/2,-Math.PI/2,0);
+	objLoader('track-lights', 0.1, 13,7,2.7, Math.PI/2,-Math.PI/2,0);
+	objLoader('interrupteur', 0.01, 9.2,9.48,1.2, Math.PI/2,0,0);
+	objLoader('interrupteur', 0.01, 9.3,9.48,1.2, Math.PI/2,0,0);
+	objLoader('remote', 0.05, 12,7.5,0.5, Math.PI/2,Math.PI/2,0);
+	objLoader('speaker3', 0.01, 13.5,9,0.2, Math.PI/2,0,0);
+	objLoader('speaker3', 0.01, 12,9,0.2, Math.PI/2,0,0);
 
 	// //BEDROOM1
 	// objLoader('office_chair', 0.6, 5.5,13.5,0.2, Math.PI/2,Math.PI/2,0);
