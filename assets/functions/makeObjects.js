@@ -1,10 +1,8 @@
 function makeObjects() {
 	objects3D = new THREE.Object3D();
 
-	var toastGeometry = new THREE.BoxGeometry(0.25,0.25,0.25);
-	var toastMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 0});
-	toast1 = new THREE.Mesh(toastGeometry, toastMaterial);
-	toast2 = new THREE.Mesh(toastGeometry, toastMaterial);
+	toast1 = new new THREE.Object3D();
+	toast2 = new new THREE.Object3D();
 	toast1.position.set(6.15,6.75,1.5);	
 	toast2.position.set(5.9,6.75,1.5);	
 	objects3D.add(toast1);
