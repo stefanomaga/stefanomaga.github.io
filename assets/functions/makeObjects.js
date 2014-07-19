@@ -1,13 +1,6 @@
 function makeObjects() {
 	objects3D = new THREE.Object3D();
 
-	toast1 = new THREE.Object3D();
-	toast2 = new THREE.Object3D();
-	toast1.position.set(6.15,6.75,1.5);	
-	toast2.position.set(5.9,6.75,1.5);	
-	objects3D.add(toast1);
-	objects3D.add(toast2);
-
 	// //LIVING ROOM
 	// objLoader('L_shaped_sofa', 0.012, 13,7.3,0, Math.PI/2,-Math.PI,0);
 	// objLoader('contemp_living_room', 0.012, 13,9.5,0.2, Math.PI/2,0,0);

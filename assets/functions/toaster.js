@@ -1,3 +1,10 @@
+toast1 = new THREE.Object3D();
+	toast2 = new THREE.Object3D();
+	toast1.position.set(6.15,6.75,1.5);	
+	toast2.position.set(5.9,6.75,1.5);	
+	apartment.add(toast1);
+	apartment.add(toast2);
+
 function makeToaster() {
 
 	var toasterGeometry = new THREE.BoxGeometry(0.5,0.5,0.5);
