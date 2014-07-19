@@ -76,7 +76,19 @@ function moveCar(){
             .easing(TWEEN.Easing.Linear.None)
             //.easing(TWEEN.Easing.Bounce.Out) 
             .delay(2600) 
-            .start();    
+            .start();  
+
+    car.position.set(car.position.x, car.position.y + 20, car.position.z);
+
+	var movement5 = new TWEEN.Tween(car.position)
+            .to({ x: car.position.x + 10, y: car.position.y, z: car.position.z}, 500)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out)  
+            .delay(2800) 
+            .start();
+
+    car.position.set(car.position.x + 10, car.position.y, car.position.z);
+
 }
 
 function resetCar(){
