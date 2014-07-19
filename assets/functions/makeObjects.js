@@ -2,7 +2,7 @@ function makeObjects() {
 	objects3D = new THREE.Object3D();
 
 	var toastGeometry = new THREE.BoxGeometry(0.25,0.25,0.25);
-	var toastMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 1});
+	var toastMaterial = new THREE.MeshLambertMaterial({transparent: true, opacity: 0});
 	toast1 = new THREE.Mesh(toastGeometry, toastMaterial);
 	toast2 = new THREE.Mesh(toastGeometry, toastMaterial);
 	toast1.position.set(6.15,6.75,1.5);	
