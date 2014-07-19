@@ -95,6 +95,7 @@
 
   <script src="assets/functions/makeApartment.js"></script>
   <script src="assets/functions/toaster.js"></script>
+  <script src="assets/functions/transformer.js"></script>
   <script src="assets/functions/music.js"></script>
   <script src="assets/functions/video.js"></script>
   <script src="assets/functions/makeDoors.js"></script>
@@ -117,7 +118,7 @@
     // once everything is loaded, we run our Three.js stuff.
     $(function () {
       var stats = initStats();
-            console.log("162");
+            console.log("163");
 
       // create a scene
       scene = new THREE.Scene();
@@ -166,6 +167,7 @@
       var controls = new function () {
         this.roof = false;
         this.night = false;
+        this.car = false;
 
         this.pointLock = function() {
           // controls = new THREE.PointerLockControls( camera );
@@ -253,6 +255,19 @@
             skyBox = makeSkyBoxDay();
             skyBox.add(lawn);
             scene.add(skyBox);
+          }
+        });
+
+      var carControl = gui.add(controls, 'car');
+
+      carControl.onChange(function (value) {
+          if(!value) {
+            window.location.car = true;
+            resetCar();
+          }
+          else {
+            window.location.car = true;
+            moveCar();
           }
         });
         

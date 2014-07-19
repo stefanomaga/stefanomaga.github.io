@@ -12,8 +12,6 @@ function makeToaster() {
 
 	toaster.interact = function() {
 		console.log("TOAST");
-		console.log(toast1);
-		console.log(toast2);
 		var finishToast1a = new TWEEN.Tween(toast1.position)
             .to({ x: toast1.position.x, y: toast1.position.y , z: toast1.position.z + 1}, 500)
             .easing(TWEEN.Easing.Linear.None)
