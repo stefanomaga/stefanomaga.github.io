@@ -14,9 +14,10 @@ function makeToaster() {
             .start();
 
         var finishToast1b = new TWEEN.Tween(toast1.position)
-            .to({ x: toast1.position.x, y: toast1.position.y , z: toast1.position.z - 1}, 2000)
+            .to({ x: toast1.position.x, y: toast1.position.y , z: toast1.position.z}, 2000)
             //.easing(TWEEN.Easing.Linear.None)
-            .easing(TWEEN.Easing.Bounce.Out)  
+            .easing(TWEEN.Easing.Bounce.Out) 
+            .delay(2000) 
             .start();   
 
         var finishToast2a = new TWEEN.Tween(toast2.position)
@@ -26,9 +27,10 @@ function makeToaster() {
             .start();
 
         var finishToast2b = new TWEEN.Tween(toast2.position)
-            .to({ x: toast2.position.x, y: toast2.position.y , z: toast2.position.z - 1 }, 2000)
+            .to({ x: toast2.position.x, y: toast2.position.y , z: toast2.position.z }, 2000)
             //.easing(TWEEN.Easing.Linear.None)
             .easing(TWEEN.Easing.Bounce.Out)  
+            .delay(2000)
             .start();
 	}
 
