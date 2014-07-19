@@ -89,6 +89,7 @@ function objLoaderAnimated(obj,scale,x,y,z, rotationX, rotationY, rotationZ) {
     object.rotation.z = rotationZ;
 
     toast1.add(object);
+    objects3D.add(object);
   });
 
 
