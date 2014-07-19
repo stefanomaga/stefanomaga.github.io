@@ -22,7 +22,7 @@ function moveCar(){
     car.position.set(car.position.x + 15, car.position.y, car.position.z);
 
 	var movement2 = new TWEEN.Tween(car.position)
-            .to({ x: car.position.x + 15, y: car.position.y, z: car.position.z}, 500)
+            .to({ x: car.position.x, y: car.position.y - 15, z: car.position.z}, 500)
             .easing(TWEEN.Easing.Linear.None)
             //.easing(TWEEN.Easing.Bounce.Out)  
             .delay(750) 

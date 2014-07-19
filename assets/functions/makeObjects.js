@@ -1,20 +1,20 @@
 function makeObjects() {
 	objects3D = new THREE.Object3D();
 
-	//LIVING ROOM
-	objLoader('L_shaped_sofa', 0.012, 13,7.3,0, Math.PI/2,-Math.PI,0);
-	objLoader('contemp_living_room', 0.012, 13,9.5,0.2, Math.PI/2,0,0);
-	objLoader('mini_stereo', 0.012, 14.5,9.25,1.6, Math.PI/2,0,0);
-	objLoader('roundTable2', 0.01, 19,4.5,1.4, Math.PI/2,0,0);
-	objLoader('chairWithCushion', 0.01, 12.8,5.6,0.2, Math.PI/2,Math.PI/2,0);
-	objLoader('chairWithCushion', 0.01, 15.5,5.6,0.2, Math.PI/2,-Math.PI/2,0);
-	objLoader('hangingLight', 0.01, 10,8,2.7, Math.PI/2,-Math.PI/2,0);
-	objLoader('track-lights', 0.1, 13,7,2.7, Math.PI/2,-Math.PI/2,0);
-	objLoader('interrupteur', 0.01, 9.2,9.48,1.2, Math.PI/2,0,0);
-	objLoader('interrupteur', 0.01, 9.3,9.48,1.2, Math.PI/2,0,0);
-	objLoader('remote', 0.05, 12,7.5,0.5, Math.PI/2,Math.PI/2,0);
-	objLoader('speaker3', 0.01, 13.5,9,0.2, Math.PI/2,0,0);
-	objLoader('speaker3', 0.01, 12,9,0.2, Math.PI/2,0,0);
+	// //LIVING ROOM
+	// objLoader('L_shaped_sofa', 0.012, 13,7.3,0, Math.PI/2,-Math.PI,0);
+	// objLoader('contemp_living_room', 0.012, 13,9.5,0.2, Math.PI/2,0,0);
+	// objLoader('mini_stereo', 0.012, 14.5,9.25,1.6, Math.PI/2,0,0);
+	// objLoader('roundTable2', 0.01, 19,4.5,1.4, Math.PI/2,0,0);
+	// objLoader('chairWithCushion', 0.01, 12.8,5.6,0.2, Math.PI/2,Math.PI/2,0);
+	// objLoader('chairWithCushion', 0.01, 15.5,5.6,0.2, Math.PI/2,-Math.PI/2,0);
+	// objLoader('hangingLight', 0.01, 10,8,2.7, Math.PI/2,-Math.PI/2,0);
+	// objLoader('track-lights', 0.1, 13,7,2.7, Math.PI/2,-Math.PI/2,0);
+	// objLoader('interrupteur', 0.01, 9.2,9.48,1.2, Math.PI/2,0,0);
+	// objLoader('interrupteur', 0.01, 9.3,9.48,1.2, Math.PI/2,0,0);
+	// objLoader('remote', 0.05, 12,7.5,0.5, Math.PI/2,Math.PI/2,0);
+	// objLoader('speaker3', 0.01, 13.5,9,0.2, Math.PI/2,0,0);
+	// objLoader('speaker3', 0.01, 12,9,0.2, Math.PI/2,0,0);
 
 	// //BEDROOM1
 	// objLoader('office_chair', 0.6, 5.5,13.5,0.2, Math.PI/2,Math.PI/2,0);
@@ -49,23 +49,23 @@ function makeObjects() {
 	// objLoader('hangingLight', 0.01, 13,3,2.7, Math.PI/2,-Math.PI/2,0);
 	// objLoader('interrupteur', 0.01, 10.8,3.97,1.2, Math.PI/2,0,0);
 
-	//KITCHEN
-	objLoader('kitchenSinkWithMarble', 0.175, 6.27,8,0.625, Math.PI/2,-Math.PI/2,0);
-	objLoader2('1DoorLowerCabinet', 0.095,0.11,0.095, 6.21,7.49,0.625, Math.PI/2,-Math.PI/2,0);
-	objLoader2('cornerCabinet', 0.2,0.22,0.2, 6.21,6.875,0.5, Math.PI/2,-Math.PI,0);
-	objLoader2('3DrawerCabinet', 0.1,0.13,0.11, 5.66,6.7,0.6, Math.PI/2,-Math.PI,0);
-	objLoader2('stove1', 0.1,0.13,0.11, 5,6.7,1, Math.PI/2,-Math.PI,0);
-	objLoader('frigorifero_Scene', 0.3, 2.8,9.25,1.8, Math.PI/2,-Math.PI,0);
-	objLoader('table4', 0.008, 4.25,8.5,0.3, Math.PI/2,-Math.PI,0);
-	objLoader('chair4', 0.008, 4.25,8,0.3, Math.PI/2,-Math.PI,0);
-	objLoader('chair4', 0.008, 5,8.5,0.3, Math.PI/2,-Math.PI/2,0);
-	objLoader('chair4', 0.008, 3.5,8.5,0.3, Math.PI/2,Math.PI/2,0);
-	objLoader('chair4', 0.008, 4.25,9,0.3, Math.PI/2,0,0);
-	objLoader('hangingLight', 0.01, 4.5,8,2.7, Math.PI/2,-Math.PI/2,0);
-	objLoader('interrupteur', 0.01, 6.48,8.2,1.2, -Math.PI/2,-Math.PI/2,0);
-	objLoader('grillePain', 0.01, 6,6.75,1, -Math.PI/2,0,0);
-	objLoaderAnimated('toast', 0.01, 6.15,6.75,1, -Math.PI/2,0,Math.PI/2,toast1);
-	objLoaderAnimated('toast', 0.01, 5.9,6.75,1, -Math.PI/2,0,Math.PI/2,toast2);
+	// //KITCHEN
+	// objLoader('kitchenSinkWithMarble', 0.175, 6.27,8,0.625, Math.PI/2,-Math.PI/2,0);
+	// objLoader2('1DoorLowerCabinet', 0.095,0.11,0.095, 6.21,7.49,0.625, Math.PI/2,-Math.PI/2,0);
+	// objLoader2('cornerCabinet', 0.2,0.22,0.2, 6.21,6.875,0.5, Math.PI/2,-Math.PI,0);
+	// objLoader2('3DrawerCabinet', 0.1,0.13,0.11, 5.66,6.7,0.6, Math.PI/2,-Math.PI,0);
+	// objLoader2('stove1', 0.1,0.13,0.11, 5,6.7,1, Math.PI/2,-Math.PI,0);
+	// objLoader('frigorifero_Scene', 0.3, 2.8,9.25,1.8, Math.PI/2,-Math.PI,0);
+	// objLoader('table4', 0.008, 4.25,8.5,0.3, Math.PI/2,-Math.PI,0);
+	// objLoader('chair4', 0.008, 4.25,8,0.3, Math.PI/2,-Math.PI,0);
+	// objLoader('chair4', 0.008, 5,8.5,0.3, Math.PI/2,-Math.PI/2,0);
+	// objLoader('chair4', 0.008, 3.5,8.5,0.3, Math.PI/2,Math.PI/2,0);
+	// objLoader('chair4', 0.008, 4.25,9,0.3, Math.PI/2,0,0);
+	// objLoader('hangingLight', 0.01, 4.5,8,2.7, Math.PI/2,-Math.PI/2,0);
+	// objLoader('interrupteur', 0.01, 6.48,8.2,1.2, -Math.PI/2,-Math.PI/2,0);
+	// objLoader('grillePain', 0.01, 6,6.75,1, -Math.PI/2,0,0);
+	// objLoaderAnimated('toast', 0.01, 6.15,6.75,1, -Math.PI/2,0,Math.PI/2,toast1);
+	// objLoaderAnimated('toast', 0.01, 5.9,6.75,1, -Math.PI/2,0,Math.PI/2,toast2);
 
 	// //BATHROOM1
 	// objLoader('hangingLight', 0.01, 4.5,5,2.7, Math.PI/2,-Math.PI/2,0);
