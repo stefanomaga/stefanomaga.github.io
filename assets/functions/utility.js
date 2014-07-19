@@ -89,7 +89,7 @@ function objLoaderAnimated(obj,scale,x,y,z, rotationX, rotationY, rotationZ, par
     object.rotation.z = rotationZ;
 
     parent.add(object);
-    
+    objects3D.add(parent);    
     objects3D.add(object);
   });
 
