@@ -77,7 +77,7 @@ function objLoader2(obj,scaleX,scaleY,scaleZ,x,y,z, rotationX, rotationY, rotati
   ); 
 }
 
-function objLoaderAnimated(obj,scale,x,y,z, rotationX, rotationY, rotationZ) {
+function objLoaderAnimated(obj,scale,x,y,z, rotationX, rotationY, rotationZ, parent) {
   var loader = new THREE.OBJMTLLoader();
   loader.addEventListener('load', function (event) {
     var object = event.content;
@@ -88,7 +88,7 @@ function objLoaderAnimated(obj,scale,x,y,z, rotationX, rotationY, rotationZ) {
     object.rotation.y = rotationY;
     object.rotation.z = rotationZ;
 
-    toast1.add(object);
+    parent.add(object);
   });
 
 

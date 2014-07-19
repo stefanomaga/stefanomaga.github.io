@@ -1,9 +1,7 @@
 toast1 = new THREE.Object3D();
-	toast2 = new THREE.Object3D();
-	toast1.position.set(0,0,0);	
-	toast2.position.set(0,0,0);	
-	apartment.add(toast1);
-	apartment.add(toast2);
+toast2 = new THREE.Object3D();
+apartment.add(toast1);
+apartment.add(toast2);
 
 function makeToaster() {
 
