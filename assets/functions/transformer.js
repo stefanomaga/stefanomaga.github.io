@@ -4,13 +4,13 @@ apartment.add(car);
 
 function moveCar(){
 	console.log("MOVE CAR");
-	// var movement1 = new TWEEN.Tween(car.position)
- //            .to({ x: car.position.x + 20, y: car.position.y , z: car.position.z}, 500)
- //            .easing(TWEEN.Easing.Linear.None)
- //            //.easing(TWEEN.Easing.Bounce.Out)  
- //            .start();
+	var movement1 = new TWEEN.Tween(car.position)
+            .to({ x: car.position.x + 20, y: car.position.y , z: car.position.z}, 500)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out)  
+            .start();
 
-    rotationCar = -2*Math.PI;
+    rotationCar = Math.PI/2;
 
 	var rotation1 = new TWEEN.Tween(car.rotation)
             .to({ z: rotationCar}, 500)
