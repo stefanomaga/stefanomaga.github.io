@@ -118,7 +118,7 @@
     // once everything is loaded, we run our Three.js stuff.
     $(function () {
       var stats = initStats();
-            console.log("195");
+            console.log("196");
 
       // create a scene
       scene = new THREE.Scene();
@@ -184,6 +184,7 @@
       };
 
       gui.add(controls, 'pointLock');
+      gui.add(controls, 'transformation');
 
       var roofControl = gui.add(controls, 'roof');
 
