@@ -7,7 +7,6 @@ transformer.position.set(15,13,0);
 transformer.visible = false;
 
 apartment.add(car);
-apartment.add(transformer);
 
 function moveCar(){
 	console.log("MOVE CAR");
@@ -220,8 +219,8 @@ function transformation(){
             .delay(1300) 
             .start();      
 
-    car.visible = false;
-    transformer.visible = true;
+apartment.remove(car);
+	apartment.add(transformer);
 
 	var rotation1 = new TWEEN.Tween(transformer.rotation)
             .to({ z: -2*Math.PI}, 50)
