@@ -28,14 +28,12 @@ function moveCar(){
             .delay(750) 
             .start();
 
-    // var rotation1 = new TWEEN.Tween(car.rotation)
-    //         .to({ z: -Math.PI/2}, 500)
-    //         .easing(TWEEN.Easing.Linear.None)
-    //         //.easing(TWEEN.Easing.Bounce.Out) 
-    //         .delay(1000) 
-    //         .start();            
-
-    // rotationCar = -Math.PI;
+	var rotation2 = new TWEEN.Tween(car.rotation)
+            .to({ z: rotationCar}, 200)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(1250) 
+            .start();             
 
 
 }
