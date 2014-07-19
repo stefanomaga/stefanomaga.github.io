@@ -9,8 +9,6 @@ function moveCar(){
             //.easing(TWEEN.Easing.Bounce.Out)  
             .start();
 
-    // car.position.set(car.position.x + 20, car.position.y, car.position.z);        
-
 	var rotation1 = new TWEEN.Tween(car.rotation)
             .to({ z: -Math.PI/2}, 500)
             .easing(TWEEN.Easing.Linear.None)
@@ -20,16 +18,16 @@ function moveCar(){
 
     rotationCar = -Math.PI/2;
 
-    // var rotation1 = new TWEEN.Tween(car.rotation)
-    //         .to({ z: -Math.PI/2}, 500)
-    //         .easing(TWEEN.Easing.Linear.None)
-    //         //.easing(TWEEN.Easing.Bounce.Out) 
-    //         .delay(1000) 
-    //         .start();            
+    var rotation1 = new TWEEN.Tween(car.rotation)
+            .to({ z: -Math.PI/2}, 500)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(1000) 
+            .start();            
 
-    // rotationCar = -Math.PI;
+    rotationCar = -Math.PI;
 
-     
+
 }
 
 function resetCar(){
