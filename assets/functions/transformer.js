@@ -12,5 +12,5 @@ function moveCar(){
 
 function resetCar(){
 	console.log("RESET CAR");
-	car.position.set(0.006, 5,17,0);
+	car.position.set(5,17,0);
 }
