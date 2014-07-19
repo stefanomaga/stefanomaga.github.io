@@ -7,6 +7,7 @@ transformer.position.set(15,13,0);
 transformer.visible = false;
 
 apartment.add(car);
+apartment.add(transformer);
 
 function moveCar(){
 	console.log("MOVE CAR");
