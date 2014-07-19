@@ -7,14 +7,26 @@ function makeToaster() {
 
 	toaster.interact = function() {
 		console.log("TOAST");
-		var finishToast1 = new TWEEN.Tween(toast1.position)
-            .to({ x: toast1.position.x, y: toast1.position.y + 1 , z: toast1.position.z }, 2000)
-            //.easing(TWEEN.Easing.Linear.None)
-            .easing(TWEEN.Easing.Bounce.Out)  
+		var finishToast1a = new TWEEN.Tween(toast1.position)
+            .to({ x: toast1.position.x, y: toast1.position.y , z: toast1.position.z + 1}, 2000)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out)  
             .start();
 
-        var finishToast2 = new TWEEN.Tween(toast2.position)
-            .to({ x: toast2.position.x, y: toast2.position.y + 1 , z: toast2.position.z }, 2000)
+        var finishToast1b = new TWEEN.Tween(toast1.position)
+            .to({ x: toast1.position.x, y: toast1.position.y , z: toast1.position.z - 1}, 2000)
+            //.easing(TWEEN.Easing.Linear.None)
+            .easing(TWEEN.Easing.Bounce.Out)  
+            .start();   
+
+        var finishToast2a = new TWEEN.Tween(toast2.position)
+            .to({ x: toast2.position.x, y: toast2.position.y , z: toast2.position.z + 1 }, 2000)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out)  
+            .start();
+
+        var finishToast2b = new TWEEN.Tween(toast2.position)
+            .to({ x: toast2.position.x, y: toast2.position.y , z: toast2.position.z - 1 }, 2000)
             //.easing(TWEEN.Easing.Linear.None)
             .easing(TWEEN.Easing.Bounce.Out)  
             .start();
