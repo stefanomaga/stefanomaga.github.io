@@ -1,4 +1,5 @@
 car = new THREE.Object3D();
+car.position.set(5,17,0);
 apartment.add(car);
 
 function moveCar(){
@@ -9,7 +10,7 @@ function moveCar(){
  //            //.easing(TWEEN.Easing.Bounce.Out)  
  //            .start();
 
-    rotationCar = -2*Math.PI/2;
+    rotationCar = -2*Math.PI;
 
 	var rotation1 = new TWEEN.Tween(car.rotation)
             .to({ z: rotationCar}, 500)
@@ -32,6 +33,6 @@ function moveCar(){
 
 function resetCar(){
 	console.log("RESET CAR");
-	car.position.set(0,0,0);
+	car.position.set(5,17,0);
 	car.rotation.set(-rotationCar);
 }

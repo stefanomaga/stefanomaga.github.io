@@ -95,7 +95,7 @@ function makeObjects() {
 	// objLoader('maceta', 1, 16.4,5,0.1, Math.PI/2,-Math.PI/2,0);
 
 	objLoader('RB-BumbleBee', 0.01, 15,13,0, -Math.PI,Math.PI,-Math.PI/2);
-	objLoaderAnimated('VH-BumbleBee', 0.006, 5,17,0, -Math.PI,-Math.PI,-Math.PI,car);
+	objLoaderAnimated('VH-BumbleBee', 0.006, 0,0,0, -Math.PI,-Math.PI,-Math.PI,car);
 
 
 	return objects3D;
