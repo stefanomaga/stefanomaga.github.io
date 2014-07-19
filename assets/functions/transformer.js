@@ -91,7 +91,7 @@ function moveCar(){
 
 }
 
-function transormation(){
+function transformation(){
 	var movement1 = new TWEEN.Tween(car.position)
             .to({ x: 15, y: 13 , z: 0}, 500)
             .easing(TWEEN.Easing.Linear.None)
