@@ -97,6 +97,125 @@ function transformation(){
             .easing(TWEEN.Easing.Linear.None)
             //.easing(TWEEN.Easing.Bounce.Out)  
             .start();	
+
+	var rotation1 = new TWEEN.Tween(car.rotation)
+            .to({ z: -2*Math.PI}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(0) 
+            .start();
+
+	var rotation2 = new TWEEN.Tween(car.rotation)
+            .to({ z: 0}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(50) 
+            .start();
+
+    var rotation3 = new TWEEN.Tween(car.rotation)
+            .to({ z: -2*Math.PI}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(100) 
+            .start();  
+
+    var rotation4 = new TWEEN.Tween(car.rotation)
+            .to({ z: 0}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(150) 
+            .start();
+
+    var rotation5 = new TWEEN.Tween(car.rotation)
+            .to({ z: -2*Math.PI}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(200) 
+            .start(); 
+
+    var rotation6 = new TWEEN.Tween(car.rotation)
+            .to({ z: 0}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(250) 
+            .start();
+
+    var rotation7 = new TWEEN.Tween(car.rotation)
+            .to({ z: -2*Math.PI}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(300) 
+            .start();  
+
+    var rotation8 = new TWEEN.Tween(car.rotation)
+            .to({ z: 0}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(350) 
+            .start();
+
+    var rotation9 = new TWEEN.Tween(car.rotation)
+            .to({ z: -2*Math.PI}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(400) 
+            .start();     
+
+   	var rotation10 = new TWEEN.Tween(car.rotation)
+            .to({ z: 0}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(450) 
+            .start();
+
+    var rotation11 = new TWEEN.Tween(car.rotation)
+            .to({ z: -2*Math.PI}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(500) 
+            .start();  
+
+    var rotation12 = new TWEEN.Tween(car.rotation)
+            .to({ z: 0}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(550) 
+            .start();
+
+    var rotation13 = new TWEEN.Tween(car.rotation)
+            .to({ z: -2*Math.PI}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(600) 
+            .start(); 
+
+    var rotation14 = new TWEEN.Tween(car.rotation)
+            .to({ z: 0}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(650) 
+            .start();
+
+    var rotation15 = new TWEEN.Tween(car.rotation)
+            .to({ z: -2*Math.PI}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(700) 
+            .start();  
+
+    var rotation16 = new TWEEN.Tween(car.rotation)
+            .to({ z: 0}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(750) 
+            .start();
+
+    var rotation17 = new TWEEN.Tween(car.rotation)
+            .to({ z: -2*Math.PI}, 50)
+            .easing(TWEEN.Easing.Linear.None)
+            //.easing(TWEEN.Easing.Bounce.Out) 
+            .delay(800) 
+            .start();                              
 }
 
 function resetCar(){
