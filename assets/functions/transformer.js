@@ -217,10 +217,11 @@ function transformation(){
             .easing(TWEEN.Easing.Linear.None)
             //.easing(TWEEN.Easing.Bounce.Out) 
             .delay(1300) 
+            .onComplete(function(){
+            	apartment.remove(car);
+				apartment.add(transformer);
+            })
             .start();      
-
-apartment.remove(car);
-	apartment.add(transformer);
 
 	var rotation1 = new TWEEN.Tween(transformer.rotation)
             .to({ z: -2*Math.PI}, 50)
