@@ -15,7 +15,7 @@ function makeToaster() {
 
 		var stereo = document.createElement('audio');
 		var stereo_source = document.createElement('source');
-		stereo_source.src = 'assets/sounds/toast.WAV';
+		stereo_source.src = 'assets/sounds/toast.mp3';
 		stereo.appendChild(stereo_source);
 		stereo.play();
 
