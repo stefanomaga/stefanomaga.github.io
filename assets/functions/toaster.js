@@ -13,11 +13,11 @@ function makeToaster() {
 	toaster.interact = function() {
 		console.log("TOAST");
 
-		var stereo = document.createElement('audio');
-		var stereo_source = document.createElement('source');
-		stereo_source.src = 'assets/sounds/toast.mp3';
-		stereo.appendChild(stereo_source);
-		stereo.play();
+		var audioToast = document.createElement('audio');
+		var audioToast_source = document.createElement('source');
+		audioToast_source.src = 'assets/sounds/toast.mp3';
+		audioToast.appendChild(audioToast_source);
+		audioToast.play();
 
 		var finishToast1a = new TWEEN.Tween(toast1.position)
             .to({ x: toast1.position.x, y: toast1.position.y , z: toast1.position.z + 1}, 500)

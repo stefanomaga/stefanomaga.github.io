@@ -128,6 +128,13 @@ function makeDoors() {
 
             else {
                   if(isOpened) {
+
+                        var audioDoor2 = document.createElement('audio');
+                        var audioDoor2_source = document.createElement('source');
+                        audioDoor2_source.src = 'assets/sounds/doorClose.mp3';
+                        audioDoor2.appendChild(audioDoor2_source);
+                        audioDoor2.play();
+
                         isOpened = false;
                         var openDoor = new TWEEN.Tween(this.parent.rotation)
                         .to({ z: 0 }, 3000)
@@ -137,6 +144,12 @@ function makeDoors() {
 
                   }
                   else {
+                        var audioDoor1 = document.createElement('audio');
+                        var audioDoor1_source = document.createElement('source');
+                        audioDoor1_source.src = 'assets/sounds/doorOpen.mp3';
+                        audioDoor1.appendChild(audioDoor1_source);
+                        audioDoor1.play();
+
                         isOpened = true;
                         var openDoor = new TWEEN.Tween(this.parent.rotation)
                         .to({ z: Math.PI/2 }, 3000)

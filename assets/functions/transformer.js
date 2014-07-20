@@ -11,6 +11,12 @@ apartment.add(car);
 function moveCar(){
 	console.log("MOVE CAR");
 
+    var audioCar = document.createElement('audio');
+    var audioCar_source = document.createElement('source');
+    audioCar_source.src = 'assets/sounds/car.mp3';
+    audioCar.appendChild(audioCar_source);
+    audioCar.play();
+
 	var movement1 = new TWEEN.Tween(car.position)
             .to({ x: car.position.x + 15, y: car.position.y , z: car.position.z}, 500)
             .easing(TWEEN.Easing.Linear.None)
@@ -94,6 +100,13 @@ function moveCar(){
 }
 
 function transformation(){
+
+	var audioCar = document.createElement('audio');
+    var audioCar_source = document.createElement('source');
+    audioCar_source.src = 'assets/sounds/car.mp3';
+    audioCar.appendChild(audioCar_source);
+    audioCar.play();
+
 	var movement1 = new TWEEN.Tween(car.position)
             .to({ x: 15, y: 13 , z: 0}, 500)
             .easing(TWEEN.Easing.Linear.None)
@@ -222,6 +235,12 @@ function transformation(){
 				apartment.add(transformer);
             })
             .start();      
+
+    var audioTrasformer = document.createElement('audio');
+    var audioTrasformer_source = document.createElement('source');
+    audioTrasformer_source.src = 'assets/sounds/carAlarm.mp3';
+    audioTrasformer.appendChild(audioTrasformer_source);
+    audioTrasformer.play();
 
 	var rotation1 = new TWEEN.Tween(transformer.rotation)
             .to({ z: -2*Math.PI}, 50)
