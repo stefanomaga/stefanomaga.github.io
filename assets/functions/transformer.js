@@ -24,10 +24,9 @@ function moveCar(){
             .easing(TWEEN.Easing.Linear.None)
             //.easing(TWEEN.Easing.Bounce.Out) 
             .delay(500) 
-            .onComplete(function() {
-            	car.position.set(car.position.x + 15, car.position.y, car.position.z);
-            })
             .start(); 
+
+    car.position.set(car.position.x + 15, car.position.y, car.position.z);
 
 	var movement2 = new TWEEN.Tween(car.position)
             .to({ x: car.position.x, y: car.position.y - 20, z: car.position.z}, 500)
@@ -43,10 +42,9 @@ function moveCar(){
             .easing(TWEEN.Easing.Linear.None)
             //.easing(TWEEN.Easing.Bounce.Out) 
             .delay(1200) 
-            .onComplete(function() {
-    			car.position.set(car.position.x, car.position.y - 20 , car.position.z);
-            })
             .start();   
+
+    car.position.set(car.position.x, car.position.y - 20 , car.position.z);
 
 	var movement3 = new TWEEN.Tween(car.position)
             .to({ x: car.position.x - 25, y: car.position.y, z: car.position.z}, 500)
@@ -62,19 +60,15 @@ function moveCar(){
             .easing(TWEEN.Easing.Linear.None)
             //.easing(TWEEN.Easing.Bounce.Out) 
             .delay(1900) 
-            .onComplete(function() {
-    			car.position.set(car.position.x-25, car.position.y, car.position.z);
-            })
             .start();           
+
+    car.position.set(car.position.x-25, car.position.y, car.position.z);
 
 	var movement4 = new TWEEN.Tween(car.position)
             .to({ x: car.position.x, y: car.position.y + 20, z: car.position.z}, 500)
             .easing(TWEEN.Easing.Linear.None)
             //.easing(TWEEN.Easing.Bounce.Out)  
             .delay(2100) 
-            .onComplete(function() {
-    			car.position.set(car.position.x, car.position.y + 20, car.position.z);
-            })
             .start();
 
     rotationCar = 0;
@@ -86,15 +80,17 @@ function moveCar(){
             .delay(2600) 
             .start();  
 
+    car.position.set(car.position.x, car.position.y + 20, car.position.z);
+
 	var movement5 = new TWEEN.Tween(car.position)
             .to({ x: car.position.x + 10, y: car.position.y, z: car.position.z}, 500)
             .easing(TWEEN.Easing.Linear.None)
             //.easing(TWEEN.Easing.Bounce.Out)  
-            .delay(2800)
-            .onComplete(function() {
-    			car.position.set(car.position.x + 10, car.position.y, car.position.z);
-            }) 
+            .delay(2800) 
             .start();
+
+    car.position.set(car.position.x + 10, car.position.y, car.position.z);
+
 }
 
 function transformation(){
